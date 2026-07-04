@@ -75,31 +75,31 @@ export const capabilitiesConfig: CapabilitiesConfig = {
   sectionLabel: "Core Skills",
   items: [
     {
-      title: "Full-Stack Development",
-      slug: "fullstack-development",
+      title: "Frontend Development",
+      slug: "frontend-development",
       description:
-        "Building scalable, high-performance web applications using React, Node.js, TypeScript, and modern cloud technologies. From database design to pixel-perfect frontends.",
+        "Building responsive user interfaces using React, TypeScript, and modern CSS frameworks like Tailwind.",
       image: "images/capability-1.jpg",
     },
     {
-      title: "UI/UX Design",
-      slug: "ui-ux-design",
+      title: "Backend Development",
+      slug: "backend-development",
       description:
-        "Crafting intuitive user experiences and visually stunning interfaces. I blend aesthetics with functionality to create products users genuinely enjoy.",
+        "Creating REST APIs using Node.js and Java. Working with authentication, databases, and server-side logic.",
       image: "images/capability-2.jpg",
     },
     {
-      title: "Cloud Architecture",
-      slug: "cloud-architecture",
+      title: "Java Development",
+      slug: "java-development",
       description:
-        "Designing resilient, cost-efficient cloud infrastructure on AWS and GCP. Expert in serverless architectures, CI/CD pipelines, and DevOps best practices.",
+        "Developing applications and APIs using Java, focusing on clean code and OOP principles.",
       image: "images/capability-3.jpg",
     },
     {
-      title: "Mobile Development",
-      slug: "mobile-development",
+      title: "Database & Git",
+      slug: "database-git",
       description:
-        "Developing cross-platform mobile applications with React Native and Flutter. Creating smooth, native-feeling experiences for iOS and Android.",
+        "Working with MySQL and Git/GitHub for version control and data management.",
       image: "images/capability-4.jpg",
     },
   ],
