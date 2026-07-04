@@ -132,47 +132,49 @@ export const capabilityDetailConfig: CapabilityDetailConfig = {
   notFoundText: "Skill not found.",
   capabilities: {
     "fullstack-development": {
-      title: "Full-Stack Development",
-      subtitle: "End-to-end web application engineering.",
-      paragraphs: [
-        "My full-stack development practice spans the entire application lifecycle, from architecting robust database schemas to delivering pixel-perfect user interfaces. I specialize in the React ecosystem paired with Node.js backends, leveraging TypeScript for type safety across the stack. Every project I undertake emphasizes clean code architecture, comprehensive testing, and performance optimization.",
-        "On the frontend, I build responsive, accessible interfaces using React, Next.js, and Tailwind CSS. I'm experienced with state management solutions like Zustand and Redux, as well as modern React patterns including hooks, server components, and streaming SSR. My focus is always on creating fast, intuitive experiences that work seamlessly across devices and network conditions.",
-        "For backend development, I design RESTful and GraphQL APIs using Node.js, Express, and Fastify. I'm proficient with both SQL databases (PostgreSQL, MySQL) and NoSQL solutions (MongoDB, Redis). I implement authentication systems, rate limiting, caching strategies, and background job processing to ensure applications are secure, scalable, and resilient under load.",
-        "DevOps and deployment are integral to my workflow. I configure CI/CD pipelines using GitHub Actions and GitLab CI, containerize applications with Docker, and deploy to cloud platforms including AWS, Vercel, and Railway. I monitor application health with logging and alerting systems, ensuring high availability and rapid incident response.",
-      ],
-    },
-    "ui-ux-design": {
-      title: "UI/UX Design",
-      subtitle: "Human-centered design that drives engagement.",
-      paragraphs: [
-        "My design philosophy centers on empathy, understanding user needs, pain points, and behaviors before a single pixel is placed. I conduct user research through interviews, surveys, and usability testing to inform design decisions with real data rather than assumptions. This research-driven approach ensures the products I design solve genuine problems.",
-        "I create comprehensive design systems that ensure consistency and scalability across products. Using Figma, I build component libraries with detailed documentation, design tokens for colors and typography, and interactive prototypes for stakeholder review. These systems accelerate development while maintaining visual coherence as products evolve.",
-        "Interaction design is where I bring interfaces to life. I prototype micro-interactions, page transitions, and loading states that make applications feel responsive and delightful. I pay close attention to accessibility standards (WCAG 2.1), ensuring designs work for users with diverse abilities across different assistive technologies.",
-        "The handoff from design to development is a process I've refined over many projects. I provide developers with annotated specifications, CSS variables, and asset exports that minimize implementation friction. My background in both design and engineering allows me to speak both languages fluently, ensuring the final product faithfully realizes the design vision.",
-      ],
-    },
-    "cloud-architecture": {
-      title: "Cloud Architecture",
-      subtitle: "Resilient, scalable infrastructure design.",
-      paragraphs: [
-        "I architect cloud-native solutions that scale gracefully from startup MVP to enterprise scale. My approach emphasizes infrastructure as code using Terraform and AWS CloudFormation, enabling reproducible environments and disaster recovery capabilities. I design systems that are cost-efficient at every stage of growth.",
-        "Serverless architectures are a particular area of expertise. I leverage AWS Lambda, API Gateway, and DynamoDB to build event-driven systems that automatically scale with demand. This approach eliminates server management overhead while ensuring you only pay for actual compute usage, making it ideal for applications with variable traffic patterns.",
-        "Security is woven into every layer of my architectural designs. I implement least-privilege IAM policies, encrypt data at rest and in transit, and configure VPCs with proper network segmentation. I stay current with cloud security best practices and compliance requirements including GDPR and SOC 2.",
-        "Monitoring and observability are essential for maintaining healthy systems. I set up comprehensive logging with CloudWatch, distributed tracing with X-Ray, and alerting systems that notify teams before users are impacted. I also design chaos engineering experiments to validate system resilience and identify failure modes before they affect production.",
-      ],
-    },
-    "mobile-development": {
-      title: "Mobile Development",
-      subtitle: "Native-quality cross-platform applications.",
-      paragraphs: [
-        "I develop mobile applications that deliver native-quality experiences while maximizing code reuse across platforms. Using React Native and Flutter, I build apps that feel at home on both iOS and Android, with platform-specific UI patterns, smooth animations, and responsive layouts that adapt to any screen size.",
-        "Performance is paramount in mobile development. I optimize app startup times, minimize bundle sizes through code splitting and tree shaking, and implement efficient state management to keep UI interactions snappy. I use profiling tools to identify and eliminate bottlenecks in rendering, memory usage, and network requests.",
-        "I integrate mobile apps with backend services, implementing real-time data synchronization, offline-first architectures, and push notification systems. I'm experienced with Firebase services, GraphQL subscriptions, and WebSocket connections for live updates. I also implement deep linking and universal links for seamless user journeys between web and app.",
-        "The mobile development lifecycle includes thorough testing across devices and OS versions. I write unit tests, integration tests, and end-to-end tests using Jest, Detox, and Maestro. I configure CI/CD pipelines that automatically build, test, and deploy to App Store Connect and Google Play Console, streamlining the release process.",
-      ],
-    },
+    title: "Full-Stack Development",
+    subtitle: "Building modern web applications.",
+    paragraphs: [
+      "I build web applications using React, TypeScript, and Java on the backend. I focus on writing clean and maintainable code while learning how real-world applications are structured.",
+      "On the frontend, I work with React, HTML, CSS, and JavaScript to create responsive and user-friendly interfaces.",
+      "On the backend, I build simple APIs using Java and Node.js, and I work with MySQL for data storage.",
+      "I use Git and GitHub for version control and practice organizing projects in a structured way."
+    ],
   },
-};
+
+  "ui-ux-design": {
+  title: "Frontend Development",
+  subtitle: "Building simple and responsive interfaces.",
+  paragraphs: [
+    "I build user interfaces using HTML, CSS, JavaScript, and React.",
+    "I focus on making layouts responsive and easy to use.",
+    "I practice improving UI structure, spacing, and basic design consistency.",
+    "I am continuously learning frontend development through real projects."
+  ],
+},
+
+  "cloud-architecture": {
+    title: "Backend & Database",
+    subtitle: "Working with APIs and data systems.",
+    paragraphs: [
+      "I build basic backend systems using Java and Node.js for handling application logic.",
+      "I work with REST APIs to connect frontend and backend systems.",
+      "I use MySQL to store and manage application data.",
+      "I focus on understanding how data flows between client and server."
+    ],
+  },
+
+  "mobile-development": {
+    title: "Projects & Practice",
+    subtitle: "Learning by building real applications.",
+    paragraphs: [
+      "I build small projects like calculator apps, memo apps, and simple games using JavaScript.",
+      "These projects help me improve problem-solving and logic-building skills.",
+      "I practice DOM manipulation, event handling, and responsive design.",
+      "I focus on improving step by step through hands-on coding."
+    ],
+  },
+}
 
 // ============================================================
 // Architecture (CinematicVision section)
@@ -264,12 +266,12 @@ export const footerConfig: FooterConfig = {
   heading: "Let's Build Something Great",
   columns: [
     {
-      title: "Connect",
-      links: ["Email", "LinkedIn", "GitHub", "Dribbble"],
+   title: "Contact",
+      links: ["Email", "GitHub", "LinkedIn"],
     },
     {
       title: "Location",
-      links: ["Jakarta, Indonesia", "Available Worldwide", "Remote Friendly"],
+      links: ["Japan", "Open to Opportunities"],
     },
   ],
   copyright: "\u00A9 2026 Naiem Rahman All rights reserved.",
