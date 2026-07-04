@@ -50,9 +50,9 @@ export interface HeroConfig {
 export const heroConfig: HeroConfig = {
   title: "Naiem Rahman",
   subtitleLine1:
-    "I am a Software Engineer and UX Designer based in Jakarta, Indonesia.",
-  subtitleLine2: "I build elegant solutions for the web and beyond.",
-  ctaText: "View My Work",
+    "Junior Software Developer based in Japan.",
+  subtitleLine2: "Building modern web applications with React, TypeScript, Java, and Spring Boot.",
+  ctaText: "View My Projects",
 };
 
 // ============================================================
