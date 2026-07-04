@@ -48,7 +48,7 @@ export interface HeroConfig {
 }
 
 export const heroConfig: HeroConfig = {
-  title: "Jonci.",
+  title: "Naiem Rahman",
   subtitleLine1:
     "I am a Software Engineer and UX Designer based in Jakarta, Indonesia.",
   subtitleLine2: "I build elegant solutions for the web and beyond.",
@@ -320,7 +320,7 @@ export const footerConfig: FooterConfig = {
       links: ["Jakarta, Indonesia", "Available Worldwide", "Remote Friendly"],
     },
   ],
-  copyright: "\u00A9 2026 Jonci. All rights reserved.",
+  copyright: "\u00A9 2026 Naiem Rahman All rights reserved.",
   bottomLinks: [
     { label: "Privacy Policy", href: "#" },
     { label: "Terms of Service", href: "#" },
