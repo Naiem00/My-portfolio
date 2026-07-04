@@ -78,26 +78,28 @@ export const capabilitiesConfig: CapabilitiesConfig = {
       title: "Frontend Development",
       slug: "frontend-development",
       description:
-        "Building responsive user interfaces using React, TypeScript, and modern CSS.",
+        "Building responsive user interfaces using React, TypeScript, and modern CSS frameworks like Tailwind.",
       image: "images/capability-1.jpg",
     },
     {
       title: "Backend Development",
       slug: "backend-development",
       description:
-        "Creating REST APIs using Java and Node.js.",
+        "Creating REST APIs using Node.js and Java. Working with authentication, databases, and server-side logic.",
       image: "images/capability-2.jpg",
     },
     {
       title: "Java Development",
       slug: "java-development",
-      description: "Developing applications using Java.",
+      description:
+        "Developing applications and APIs using Java, focusing on clean code and OOP principles.",
       image: "images/capability-3.jpg",
     },
     {
       title: "Database & Git",
       slug: "database-git",
-      description: "Working with MySQL and Git/GitHub.",
+      description:
+        "Working with MySQL and Git/GitHub for version control and data management.",
       image: "images/capability-4.jpg",
     },
   ],
@@ -131,30 +133,68 @@ export const capabilityDetailConfig: CapabilityDetailConfig = {
   capabilities: {
     "fullstack-development": {
       title: "Full-Stack Development",
-      subtitle: "Building modern web apps.",
+      subtitle: "Building modern web applications.",
       paragraphs: [
-        "I build web apps using React and Java.",
-        "I work with frontend and backend basics.",
-        "I use MySQL for data storage.",
-        "I practice Git and project structure.",
+        "I build web apps using React, TypeScript, Java, and Node.js.",
+        "I focus on clean UI and responsive frontend design.",
+        "I build simple REST APIs and connect frontend with backend.",
+        "I use GitHub for version control and project management.",
+      ],
+    },
+    "frontend-development": {
+      title: "Frontend Development",
+      subtitle: "UI development and responsive design.",
+      paragraphs: [
+        "I build responsive UI using HTML, CSS, JavaScript, and React.",
+        "I focus on layout, spacing, and usability.",
+        "I practice modern frontend development through projects.",
+        "I improve step by step through real coding experience.",
+      ],
+    },
+    "backend-development": {
+      title: "Backend Development",
+      subtitle: "API and server-side development.",
+      paragraphs: [
+        "I build backend systems using Node.js and Java.",
+        "I create REST APIs and handle application logic.",
+        "I work with MySQL for database management.",
+        "I focus on understanding how server and client communicate.",
+      ],
+    },
+    "java-development": {
+      title: "Java Development",
+      subtitle: "Object-oriented programming with Java.",
+      paragraphs: [
+        "I develop applications using Java and OOP principles.",
+        "I build simple backend systems and APIs.",
+        "I focus on clean and structured code.",
+        "I continuously practice Java through projects.",
       ],
     },
   },
 };
 
 // ============================================================
-// Architecture (Showreel)
+// Showreel
 // ============================================================
 
-export const architectureConfig = {
+export interface ArchitectureConfig {
+  sectionLabel: string;
+  videoPath: string;
+  title: string;
+  description: string;
+}
+
+export const architectureConfig: ArchitectureConfig = {
   sectionLabel: "Showreel",
-  videoPath: "",
-  title: "My Development Work",
-  description: "Projects and practice work.",
+  videoPath: "/videos/showreel.mp4",
+  title: "A Glimpse Into My Work",
+  description:
+    "A collection of my projects and learning journey using modern web technologies.",
 };
 
 // ============================================================
-// Research
+// Projects
 // ============================================================
 
 export interface ResearchProject {
@@ -175,7 +215,7 @@ export const researchConfig: ResearchConfig = {
     {
       title: "Calculator App",
       year: "2026",
-      discipline: "JavaScript",
+      discipline: "JavaScript Project",
       image: "images/research-1.jpg",
     },
     {
@@ -183,6 +223,18 @@ export const researchConfig: ResearchConfig = {
       year: "2026",
       discipline: "CRUD App",
       image: "images/research-2.jpg",
+    },
+    {
+      title: "Browser Game",
+      year: "2026",
+      discipline: "Game Development",
+      image: "images/research-3.jpg",
+    },
+    {
+      title: "Responsive Website",
+      year: "2026",
+      discipline: "Frontend Design",
+      image: "images/research-4.jpg",
     },
   ],
 };
@@ -220,7 +272,7 @@ export const footerConfig: FooterConfig = {
       links: ["Japan", "Open to Opportunities"],
     },
   ],
-  copyright: "© 2026 Naiem Rahman All rights reserved.",
+  copyright: "© 2026 Naiem Rahman. All rights reserved.",
   bottomLinks: [
     { label: "Privacy Policy", href: "#" },
     { label: "Terms of Service", href: "#" },
