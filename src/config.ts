@@ -141,6 +141,7 @@ export const capabilityDetailConfig: CapabilityDetailConfig = {
         "I use GitHub for version control and project management.",
       ],
     },
+
     "frontend-development": {
       title: "Frontend Development",
       subtitle: "UI development and responsive design.",
@@ -151,6 +152,7 @@ export const capabilityDetailConfig: CapabilityDetailConfig = {
         "I improve step by step through real coding experience.",
       ],
     },
+
     "backend-development": {
       title: "Backend Development",
       subtitle: "API and server-side development.",
@@ -161,6 +163,7 @@ export const capabilityDetailConfig: CapabilityDetailConfig = {
         "I focus on understanding how server and client communicate.",
       ],
     },
+
     "java-development": {
       title: "Java Development",
       subtitle: "Object-oriented programming with Java.",
@@ -169,6 +172,17 @@ export const capabilityDetailConfig: CapabilityDetailConfig = {
         "I build simple backend systems and APIs.",
         "I focus on clean and structured code.",
         "I continuously practice Java through projects.",
+      ],
+    },
+
+    "database-git": {
+      title: "Database & Git",
+      subtitle: "Version control and database basics.",
+      paragraphs: [
+        "I use MySQL to manage structured data and understand relational database basics.",
+        "I work with Git and GitHub for version control and collaboration.",
+        "I practice branching, merging, and commit history management.",
+        "This helps me maintain clean and organized project workflow.",
       ],
     },
   },
@@ -240,7 +254,7 @@ export const researchConfig: ResearchConfig = {
 };
 
 // ============================================================
-// Footer Types
+// Footer
 // ============================================================
 
 export interface FooterLink {
@@ -264,10 +278,6 @@ export interface FooterConfig {
   copyright: string;
   bottomLinks: FooterBottomLink[];
 }
-
-// ============================================================
-// Footer Data
-// ============================================================
 
 export const footerConfig: FooterConfig = {
   heading: "Let's Build Something Great",
