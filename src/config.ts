@@ -240,12 +240,17 @@ export const researchConfig: ResearchConfig = {
 };
 
 // ============================================================
-// Footer
+// Footer Types
 // ============================================================
+
+export interface FooterLink {
+  label: string;
+  href: string;
+}
 
 export interface FooterLinkColumn {
   title: string;
-  links: string[];
+  links: FooterLink[];
 }
 
 export interface FooterBottomLink {
@@ -260,16 +265,30 @@ export interface FooterConfig {
   bottomLinks: FooterBottomLink[];
 }
 
+// ============================================================
+// Footer Data
+// ============================================================
+
 export const footerConfig: FooterConfig = {
   heading: "Let's Build Something Great",
   columns: [
     {
       title: "Contact",
-      links: ["Email", "GitHub", "LinkedIn"],
+      links: [
+        { label: "Email", href: "mailto:tsnayeem@gmail.com" },
+        { label: "GitHub", href: "https://github.com/Naiem00" },
+        {
+          label: "LinkedIn",
+          href: "https://www.linkedin.com/in/naiem-rahman-2b96583aa/",
+        },
+      ],
     },
     {
       title: "Location",
-      links: ["Japan", "Open to Opportunities"],
+      links: [
+        { label: "Japan", href: "#" },
+        { label: "Open to Opportunities", href: "#" },
+      ],
     },
   ],
   copyright: "© 2026 Naiem Rahman. All rights reserved.",
