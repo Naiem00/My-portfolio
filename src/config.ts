@@ -28,7 +28,6 @@ export interface NavigationConfig {
 
 export const navigationConfig: NavigationConfig = {
   links: [
-    { label: "About", href: "#about" },
     { label: "Skills", href: "#curriculum" },
     { label: "Showreel", href: "#cinematic" },
     { label: "Projects", href: "#alumni" },
@@ -46,8 +45,6 @@ export interface HeroConfig {
   subtitleLine1: string;
   subtitleLine2: string;
   ctaText: string;
-  resumeText: string;
-  resumeUrl: string;
 }
 
 export const heroConfig: HeroConfig = {
@@ -56,34 +53,6 @@ export const heroConfig: HeroConfig = {
   subtitleLine2:
     "Building modern web applications with React, TypeScript, Java, and Spring Boot.",
   ctaText: "View My Projects",
-  resumeText: "Download Resume",
-  resumeUrl: "/resume.pdf",
-};
-
-// ============================================================
-// About
-// ============================================================
-
-export interface AboutConfig {
-  sectionLabel: string;
-  bio: string;
-  education: string;
-  location: string;
-  languages: string;
-  certifications: string[];
-}
-
-export const aboutConfig: AboutConfig = {
-  sectionLabel: "About Me",
-  bio: "I'm Naiem Naimur Rahman, a Junior Software Developer based in Toyama, Japan. I graduated from Sundai IT Business College in March 2026 with a specialization in IT. I'm passionate about building modern web applications with React, TypeScript, Java, and Spring Boot.",
-  education: "Sundai IT Business College - IT Expert Course (2024-2026)",
-  location: "Toyama-ken, Takaoka-shi, Japan",
-  languages: "Japanese (JLPT N2), English, Hindi, Bengali",
-  certifications: [
-    "JLPT N2 (July 2025)",
-    "TOEIC 660 (June 2025)",
-    "JPET 532 (October 2024)",
-  ],
 };
 
 // ============================================================
@@ -247,10 +216,6 @@ export interface ResearchProject {
   year: string;
   discipline: string;
   image: string;
-  description: string;
-  techStack: string[];
-  githubUrl?: string;
-  liveUrl?: string;
 }
 
 export interface ResearchConfig {
@@ -266,40 +231,24 @@ export const researchConfig: ResearchConfig = {
       year: "2026",
       discipline: "JavaScript Project",
       image: "images/research-1.jpg",
-      description: "A functional calculator built with vanilla JavaScript",
-      techStack: ["JavaScript", "HTML", "CSS"],
-      // githubUrl: "https://github.com/Naiem00/...",
-      // liveUrl: "https://...",
     },
     {
       title: "Memo App",
       year: "2026",
       discipline: "CRUD App",
       image: "images/research-2.jpg",
-      description: "A note-taking app with CRUD operations",
-      techStack: ["React", "JavaScript"],
-      // githubUrl: "https://github.com/Naiem00/...",
-      // liveUrl: "https://...",
     },
     {
       title: "Browser Game",
       year: "2026",
       discipline: "Game Development",
       image: "images/research-3.jpg",
-      description: "An interactive browser-based game",
-      techStack: ["JavaScript", "HTML5", "CSS"],
-      // githubUrl: "https://github.com/Naiem00/...",
-      // liveUrl: "https://...",
     },
     {
       title: "Responsive Website",
       year: "2026",
       discipline: "Frontend Design",
       image: "images/research-4.jpg",
-      description: "A fully responsive website design",
-      techStack: ["HTML", "CSS", "JavaScript"],
-      // githubUrl: "https://github.com/Naiem00/...",
-      // liveUrl: "https://...",
     },
   ],
 };
@@ -347,7 +296,7 @@ export const footerConfig: FooterConfig = {
     {
       title: "Location",
       links: [
-        { label: "Toyama, Japan", href: "#" },
+        { label: "Japan", href: "#" },
         { label: "Open to Opportunities", href: "#" },
       ],
     },
