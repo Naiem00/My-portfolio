@@ -89,8 +89,18 @@ export default function Hero() {
           )}
         </div>
 
+        {/* Buttons Container - Side by Side */}
         {heroConfig.ctaText && (
-          <div style={{ display: 'flex', justifyContent: 'center' }} className="pointer-events-auto">
+          <div 
+            style={{ 
+              display: 'flex', 
+              justifyContent: 'center', 
+              gap: '16px',
+              flexWrap: 'wrap',
+            }} 
+            className="pointer-events-auto"
+          >
+            {/* View Projects Button */}
             <LiquidGlassButton
               onClick={() => {
                 document.querySelector('#curriculum')?.scrollIntoView({ behavior: 'smooth' });
@@ -98,6 +108,41 @@ export default function Hero() {
             >
               {heroConfig.ctaText}
             </LiquidGlassButton>
+
+            {/* Download CV Button - NEW */}
+            <a
+              href={heroConfig.resumeUrl}
+              download
+              style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                padding: '14px 32px',
+                background: 'transparent',
+                color: '#ffffff',
+                textDecoration: 'none',
+                fontFamily: "'GeistMono', monospace",
+                fontWeight: 200,
+                fontSize: '13px',
+                letterSpacing: '0.05em',
+                border: '1px solid rgba(255, 255, 255, 0.3)',
+                backdropFilter: 'blur(12px)',
+                WebkitBackdropFilter: 'blur(12px)',
+                borderRadius: '9999px',
+                cursor: 'pointer',
+                transition: 'all 0.3s ease',
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.6)';
+                e.currentTarget.style.background = 'rgba(255, 255, 255, 0.1)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.3)';
+                e.currentTarget.style.background = 'transparent';
+              }}
+            >
+              Download CV
+            </a>
           </div>
         )}
       </div>

@@ -46,6 +46,7 @@ export interface HeroConfig {
   subtitleLine1: string;
   subtitleLine2: string;
   ctaText: string;
+  resumeUrl: string;  
 }
 
 export const heroConfig: HeroConfig = {
@@ -54,6 +55,7 @@ export const heroConfig: HeroConfig = {
   subtitleLine2:
     "Building modern web applications with React, TypeScript, Java, and Spring Boot.",
   ctaText: "View My Projects",
+  resumeUrl: "/resume.pdf",  //
 };
 // ============================================================
 // About       
