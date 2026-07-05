@@ -27,12 +27,13 @@ export interface NavigationConfig {
 }
 
 export const navigationConfig: NavigationConfig = {
-  links: [
-    { label: "Skills", href: "#curriculum" },
-    { label: "Showreel", href: "#cinematic" },
-    { label: "Projects", href: "#alumni" },
-    { label: "Contact", href: "#footer" },
-  ],
+ links: [
+  { label: "About", href: "#about" },
+  { label: "Skills", href: "#curriculum" },
+  { label: "Showreel", href: "#cinematic" },
+  { label: "Projects", href: "#alumni" },
+  { label: "Contact", href: "#footer" },
+],
   ctaText: "Hire Me",
 };
 
@@ -54,7 +55,33 @@ export const heroConfig: HeroConfig = {
     "Building modern web applications with React, TypeScript, Java, and Spring Boot.",
   ctaText: "View My Projects",
 };
+// ============================================================
+// About       
+// ============================================================
 
+export interface AboutConfig {
+  sectionLabel: string;
+  bio: string;
+  education: string;
+  location: string;
+  languages: string;
+  certifications: string[];
+}
+
+export const aboutConfig: AboutConfig = {
+  sectionLabel: "About Me",
+  bio: "I'm Naiem Naimur Rahman, a Junior Software Developer based in Toyama, Japan. I graduated from Sundai IT Business College in March 2026 with a specialization in IT. I'm passionate about building modern web applications with React, TypeScript, Java, and Spring Boot.",
+  education: "Sundai IT Business College - IT Expert Course (2024-2026)",
+  location: "Toyama-ken, Takaoka-shi, Japan",
+  languages: "Japanese (JLPT N2), English, Hindi, Bengali",
+  certifications: [
+    "JLPT N2 (July 2025)",
+    "TOEIC 660 (June 2025)",
+    "JPET 532 (October 2024)",
+  ],
+};
+
+// ============================================================
 // ============================================================
 // Capabilities
 // ============================================================
