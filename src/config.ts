@@ -55,8 +55,9 @@ export const heroConfig: HeroConfig = {
   subtitleLine2:
     "Building modern web applications with React, TypeScript, Java, and Spring Boot.",
   ctaText: "View My Projects",
-  resumeUrl: "/resume.pdf",  //
+  resumeUrl: "/resume.pdf",
 };
+
 // ============================================================
 // About       
 // ============================================================
@@ -68,7 +69,6 @@ export interface AboutConfig {
   location: string;
   languages: string;
   certifications: string[];
-  image: string;        
 }
 
 export const aboutConfig: AboutConfig = {
@@ -82,10 +82,8 @@ export const aboutConfig: AboutConfig = {
     "TOEIC 660 (June 2025)",
     "JPET 532 (October 2024)",
   ],
-  image: "profile.jpg", 
 };
 
-// ============================================================
 // ============================================================
 // Capabilities
 // ============================================================
