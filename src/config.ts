@@ -48,7 +48,7 @@ export interface HeroConfig {
 }
 
 export const heroConfig: HeroConfig = {
-  title: "Naiem Rahman",
+  title: "Naiem Naimur",
   subtitleLine1: "Junior Software Developer based in Japan.",
   subtitleLine2:
     "Building modern web applications with React, TypeScript, Java, and Spring Boot.",
