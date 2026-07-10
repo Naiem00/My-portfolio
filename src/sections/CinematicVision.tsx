@@ -100,7 +100,7 @@ export default function CinematicVision() {
 
   return (
     <section
-      id="showreel"
+      id="cinematic"
       ref={containerRef}
       style={{
         padding: '150px 5vw',
