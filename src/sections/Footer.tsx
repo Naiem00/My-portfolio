@@ -11,7 +11,7 @@ export default function Footer() {
 
   return (
     <footer
-      id="contact"
+      id="footer"
       style={{
         padding: '150px 5vw 60px',
         background: '#0a0a0a',
@@ -109,7 +109,6 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Availability Section (Location replaced) */}
           <div>
             <div
               className="font-mono text-xs tracking-widest uppercase mb-6"
