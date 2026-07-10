@@ -103,7 +103,7 @@ export default function Hero() {
             {/* View Projects Button */}
             <LiquidGlassButton
               onClick={() => {
-                document.querySelector('#curriculum')?.scrollIntoView({ behavior: 'smooth' });
+                document.querySelector('#alumni')?.scrollIntoView({ behavior: 'smooth' });
               }}
             >
               {heroConfig.ctaText}
