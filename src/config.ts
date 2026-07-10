@@ -245,8 +245,9 @@ export interface ResearchProject {
   year: string;
   discipline: string;
   image: string;
+  github: string;
+  live: string;
 }
-
 export interface ResearchConfig {
   sectionLabel: string;
   projects: ResearchProject[];
@@ -255,30 +256,40 @@ export interface ResearchConfig {
 export const researchConfig: ResearchConfig = {
   sectionLabel: "Projects",
   projects: [
+  {
+  title: "Calculator App",
+  year: "2026",
+  discipline: "Responsive Calculator",
+  image: "images/research-1.jpg",
+  github: "https://github.com/Naiem00/mobile-app/tree/main/03_4calculator",
+  live: "https://calc-pro-git-main-naiem-portfolio.vercel.app",
+},
+    
+ {
+  title: "Memo App",
+  year: "2026",
+  discipline: "Note Taking Application",
+  image: "images/research-2.jpg",
+  github: "https://github.com/Naiem00/mobile-app/tree/main/04_7memo",
+  live: "https://memo1-zeta.vercel.app",
+},
     {
-      title: "Calculator App",
-      year: "2026",
-      discipline: "JavaScript Project",
-      image: "images/research-1.jpg",
-    },
-    {
-      title: "Memo App",
-      year: "2026",
-      discipline: "CRUD App",
-      image: "images/research-2.jpg",
-    },
-    {
-      title: "Browser Game",
-      year: "2026",
-      discipline: "Game Development",
-      image: "images/research-3.jpg",
-    },
-    {
-      title: "Responsive Website",
-      year: "2026",
-      discipline: "Frontend Design",
-      image: "images/research-4.jpg",
-    },
+  title: "Omikuji Game",
+  year: "2026",
+  discipline: "Interactive Fortune Game",
+  image: "images/research-3.jpg",
+  github: "https://github.com/Naiem00/mobile-app/tree/main/10c_omikuji",
+  live: "https://omikuzigame-71iv3kdtm-naiem-portfolio.vercel.app",
+},
+    
+ {
+  title: "Time Guessing Quiz",
+  year: "2026",
+  discipline: "Interactive Quiz",
+  image: "images/research-4.jpg",
+  github: "https://github.com/Naiem00/mobile-app/tree/main/98_Time%20guessing%20quiz",
+  live: "https://timeguessingquiz.vercel.app",
+},
   ],
 };
 
