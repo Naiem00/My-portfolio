@@ -56,23 +56,17 @@ export default function Navigation() {
       </a>
 
       <div className="hidden md:flex items-center" style={{ gap: 40 }}>
-        {navigationConfig.links.map((link) => {
-          let translationKey = '';
-          if (link.label.toLowerCase() === 'home') translationKey = 'navHome';
-          else if (link.label.toLowerCase() === 'projects') translationKey = 'navProjects';
-          else if (link.label.toLowerCase() === 'about') translationKey = 'navAbout';
-
-          return (
-            <a
-              key={link.label}
-              href={link.href}
-              onClick={(e) => handleClick(e, link.href)}
-              className="nav-link"
-            >
-              {translationKey ? t(translationKey) : link.label}
-            </a>
-          );
-        })}
+        {navigationConfig.links.map((link) => (
+          <a
+            key={link.label}
+            href={link.href}
+            onClick={(e) => handleClick(e, link.href)}
+            className="nav-link"
+          >
+            {/* ডাইনামিক কি: nav + About, nav + Skills ইত্যাদি */}
+            {t(`nav${link.label}`)}
+          </a>
+        ))}
       </div>
 
       <div className="flex items-center" style={{ gap: 24 }}>
@@ -102,7 +96,7 @@ export default function Navigation() {
             onClick={(e) => handleClick(e, '#footer')}
             className="nav-link hidden md:inline-block"
           >
-            {navigationConfig.ctaText}
+            {t('ctaHire')}
           </a>
         )}
       </div>
