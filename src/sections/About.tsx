@@ -1,6 +1,9 @@
+import { useTranslation } from 'react-i18next';
 import { aboutConfig } from '../config';
 
 export default function About() {
+  const { t } = useTranslation();
+
   return (
     <section
       id="about"
@@ -25,7 +28,7 @@ export default function About() {
             marginBottom: '64px',
           }}
         >
-          {aboutConfig.sectionLabel}
+          {t('aboutLabel')}
         </span>
 
         {/* Name */}
@@ -54,7 +57,7 @@ export default function About() {
             marginBottom: '80px',
           }}
         >
-          {aboutConfig.bio}
+          {t('aboutBio')}
         </p>
 
         {/* Info Grid */}
@@ -67,83 +70,29 @@ export default function About() {
           }}
         >
           <div>
-            <h4
-              style={{
-                fontFamily: "'GeistMono', monospace",
-                fontWeight: 300,
-                fontSize: '11px',
-                letterSpacing: '0.15em',
-                textTransform: 'uppercase',
-                color: '#666666',
-                marginBottom: '12px',
-              }}
-            >
-              Education
+            <h4 style={{ fontFamily: "'GeistMono', monospace", fontWeight: 300, fontSize: '11px', letterSpacing: '0.15em', textTransform: 'uppercase', color: '#666666', marginBottom: '12px' }}>
+              {t('eduLabel')}
             </h4>
-            <p
-              style={{
-                fontFamily: "'Inter', sans-serif",
-                fontWeight: 200,
-                fontSize: '15px',
-                lineHeight: 1.6,
-                color: '#cccccc',
-              }}
-            >
-              {aboutConfig.education}
+            <p style={{ fontFamily: "'Inter', sans-serif", fontWeight: 200, fontSize: '15px', lineHeight: 1.6, color: '#cccccc' }}>
+              {t('eduText')}
             </p>
           </div>
 
           <div>
-            <h4
-              style={{
-                fontFamily: "'GeistMono', monospace",
-                fontWeight: 300,
-                fontSize: '11px',
-                letterSpacing: '0.15em',
-                textTransform: 'uppercase',
-                color: '#666666',
-                marginBottom: '12px',
-              }}
-            >
-              Location
+            <h4 style={{ fontFamily: "'GeistMono', monospace", fontWeight: 300, fontSize: '11px', letterSpacing: '0.15em', textTransform: 'uppercase', color: '#666666', marginBottom: '12px' }}>
+              {t('locLabel')}
             </h4>
-            <p
-              style={{
-                fontFamily: "'Inter', sans-serif",
-                fontWeight: 200,
-                fontSize: '15px',
-                lineHeight: 1.6,
-                color: '#cccccc',
-              }}
-            >
-              {aboutConfig.location}
+            <p style={{ fontFamily: "'Inter', sans-serif", fontWeight: 200, fontSize: '15px', lineHeight: 1.6, color: '#cccccc' }}>
+              {t('locText')}
             </p>
           </div>
 
           <div>
-            <h4
-              style={{
-                fontFamily: "'GeistMono', monospace",
-                fontWeight: 300,
-                fontSize: '11px',
-                letterSpacing: '0.15em',
-                textTransform: 'uppercase',
-                color: '#666666',
-                marginBottom: '12px',
-              }}
-            >
-              Languages
+            <h4 style={{ fontFamily: "'GeistMono', monospace", fontWeight: 300, fontSize: '11px', letterSpacing: '0.15em', textTransform: 'uppercase', color: '#666666', marginBottom: '12px' }}>
+              {t('langLabel')}
             </h4>
-            <p
-              style={{
-                fontFamily: "'Inter', sans-serif",
-                fontWeight: 200,
-                fontSize: '15px',
-                lineHeight: 1.6,
-                color: '#cccccc',
-              }}
-            >
-              {aboutConfig.languages}
+            <p style={{ fontFamily: "'Inter', sans-serif", fontWeight: 200, fontSize: '15px', lineHeight: 1.6, color: '#cccccc' }}>
+              {t('langText')}
             </p>
           </div>
         </div>
@@ -161,7 +110,7 @@ export default function About() {
               marginBottom: '20px',
             }}
           >
-            Certifications
+            {t('certsLabel')}
           </h4>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px' }}>
             {aboutConfig.certifications.map((cert: string, index: number) => (
