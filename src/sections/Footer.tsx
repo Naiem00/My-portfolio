@@ -9,9 +9,18 @@ export default function Footer() {
     message: "",
   });
 
-  // Dynamic Free Email Submission Handler
+  // Loading and Success UI states
+  const [isSending, setIsSending] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<{ type: "success" | "error" | null; msg: string }>({
+    type: null,
+    msg: ""
+  });
+
+  // Dynamic Free Email Submission Handler with Loading & Custom Feedback
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setIsSending(true);
+    setSubmitStatus({ type: null, msg: "" });
     
     try {
       const response = await fetch("https://formsubmit.co/ajax/tsnayeem@gmail.com", {
@@ -21,6 +30,7 @@ export default function Footer() {
           "Accept": "application/json"
         },
         body: JSON.stringify({
+          _subject: `Portfolio Message from ${formData.name}`,
           Name: formData.name,
           Email: formData.email,
           Message: formData.message
@@ -28,14 +38,16 @@ export default function Footer() {
       });
 
       if (response.ok) {
-        alert("Message sent successfully!");
+        setSubmitStatus({ type: "success", msg: "Thank you! Your message has been sent successfully." });
         setFormData({ name: "", email: "", message: "" }); // Form reset after success
       } else {
-        alert("Something went wrong. Please try again.");
+        setSubmitStatus({ type: "error", msg: "Something went wrong. Please try again." });
       }
     } catch (error) {
       console.error("Error submitting form:", error);
-      alert("Error sending message. Check your connection.");
+      setSubmitStatus({ type: "error", msg: "Error sending message. Please check your connection." });
+    } finally {
+      setIsSending(false);
     }
   };
 
@@ -83,9 +95,10 @@ export default function Footer() {
                 type="text"
                 id="name"
                 required
+                disabled={isSending}
                 value={formData.name}
                 onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                className="w-full bg-[#111625]/40 border border-white/10 rounded-md p-4 text-white focus:outline-none focus:border-cyan-400 transition-colors h-14"
+                className="w-full bg-[#111625]/40 border border-white/10 rounded-md p-4 text-white focus:outline-none focus:border-cyan-400 transition-colors h-14 disabled:opacity-50"
               />
             </div>
 
@@ -97,9 +110,10 @@ export default function Footer() {
                 type="email"
                 id="email"
                 required
+                disabled={isSending}
                 value={formData.email}
                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                className="w-full bg-[#111625]/40 border border-white/10 rounded-md p-4 text-white focus:outline-none focus:border-cyan-400 transition-colors h-14"
+                className="w-full bg-[#111625]/40 border border-white/10 rounded-md p-4 text-white focus:outline-none focus:border-cyan-400 transition-colors h-14 disabled:opacity-50"
               />
             </div>
 
@@ -110,18 +124,38 @@ export default function Footer() {
               <textarea
                 id="message"
                 required
+                disabled={isSending}
                 rows={6}
                 value={formData.message}
                 onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                className="w-full bg-[#111625]/40 border border-white/10 rounded-md p-4 text-white focus:outline-none focus:border-cyan-400 transition-colors resize-none"
+                className="w-full bg-[#111625]/40 border border-white/10 rounded-md p-4 text-white focus:outline-none focus:border-cyan-400 transition-colors resize-none disabled:opacity-50"
               />
             </div>
 
+            {/* Status Messages UI Feedback Note */}
+            {submitStatus.type && (
+              <div 
+                className={`text-sm font-mono tracking-wide p-3 rounded-md ${
+                  submitStatus.type === "success" ? "text-emerald-400 bg-emerald-500/10" : "text-rose-400 bg-rose-500/10"
+                }`}
+              >
+                {submitStatus.msg}
+              </div>
+            )}
+
             <button
               type="submit"
-              className="w-full bg-cyan-400 hover:bg-cyan-500 text-slate-950 font-bold py-4 px-6 rounded-md tracking-wider transition-colors uppercase text-sm"
+              disabled={isSending}
+              className="w-full bg-cyan-400 hover:bg-cyan-500 text-slate-950 font-bold py-4 px-6 rounded-md tracking-wider transition-colors uppercase text-sm disabled:opacity-50 flex items-center justify-center gap-2"
             >
-              Send Message
+              {isSending ? (
+                <>
+                  <span className="w-4 h-4 border-2 border-slate-950 border-t-transparent rounded-full animate-spin"></span>
+                  Sending...
+                </>
+              ) : (
+                "Send Message"
+              )}
             </button>
           </form>
 
