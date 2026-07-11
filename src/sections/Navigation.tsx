@@ -1,8 +1,10 @@
 import { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { siteConfig, navigationConfig } from '../config';
 
 export default function Navigation() {
   const [scrolled, setScrolled] = useState(false);
+  const { t, i18n } = useTranslation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -18,6 +20,10 @@ export default function Navigation() {
     if (el) {
       el.scrollIntoView({ behavior: 'smooth' });
     }
+  };
+
+  const changeLanguage = (lng: string) => {
+    i18n.changeLanguage(lng);
   };
 
   if (!siteConfig.brandName && navigationConfig.links.length === 0) {
@@ -46,31 +52,60 @@ export default function Navigation() {
           letterSpacing: '-0.5px',
         }}
       >
-        {siteConfig.brandName}
+        {i18n.language === 'ja' ? t('heroTitle') : siteConfig.brandName}
       </a>
 
       <div className="hidden md:flex items-center" style={{ gap: 40 }}>
-        {navigationConfig.links.map((link) => (
-          <a
-            key={link.label}
-            href={link.href}
-            onClick={(e) => handleClick(e, link.href)}
-            className="nav-link"
-          >
-            {link.label}
-          </a>
-        ))}
+        {navigationConfig.links.map((link) => {
+          let translationKey = '';
+          if (link.label.toLowerCase() === 'home') translationKey = 'navHome';
+          else if (link.label.toLowerCase() === 'projects') translationKey = 'navProjects';
+          else if (link.label.toLowerCase() === 'about') translationKey = 'navAbout';
+
+          return (
+            <a
+              key={link.label}
+              href={link.href}
+              onClick={(e) => handleClick(e, link.href)}
+              className="nav-link"
+            >
+              {translationKey ? t(translationKey) : link.label}
+            </a>
+          );
+        })}
       </div>
 
-      {navigationConfig.ctaText && (
-        <a
-          href="#footer"
-          onClick={(e) => handleClick(e, '#footer')}
-          className="nav-link hidden md:inline-block"
-        >
-          {navigationConfig.ctaText}
-        </a>
-      )}
+      <div className="flex items-center" style={{ gap: 24 }}>
+        <div className="flex gap-2 font-mono text-xs select-none">
+          <button
+            onClick={() => changeLanguage('en')}
+            className={`transition-colors duration-300 hover:text-white ${
+              i18n.language === 'en' ? 'text-white underline underline-offset-4 font-bold' : 'text-zinc-500'
+            }`}
+          >
+            EN
+          </button>
+          <span className="text-zinc-700">|</span>
+          <button
+            onClick={() => changeLanguage('ja')}
+            className={`transition-colors duration-300 hover:text-white ${
+              i18n.language === 'ja' ? 'text-white underline underline-offset-4 font-bold' : 'text-zinc-500'
+            }`}
+          >
+            JA
+          </button>
+        </div>
+
+        {navigationConfig.ctaText && (
+          <a
+            href="#footer"
+            onClick={(e) => handleClick(e, '#footer')}
+            className="nav-link hidden md:inline-block"
+          >
+            {navigationConfig.ctaText}
+          </a>
+        )}
+      </div>
     </nav>
   );
 }
