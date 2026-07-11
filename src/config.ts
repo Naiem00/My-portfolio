@@ -262,7 +262,7 @@ export const researchConfig: ResearchConfig = {
   discipline: "Responsive Calculator",
   image: "images/research-1.jpg",
   github: "https://github.com/Naiem00/mobile-app/tree/main/03_4calculator",
-  live: "https://calc-pro-git-main-naiem-portfolio.vercel.app",
+  live: "https://calc-pro-psi.vercel.app",
 },
     
  {
@@ -279,7 +279,7 @@ export const researchConfig: ResearchConfig = {
   discipline: "Interactive Fortune Game",
   image: "images/research-3.jpg",
   github: "https://github.com/Naiem00/mobile-app/tree/main/10c_omikuji",
-  live: "https://omikuzigame-71iv3kdtm-naiem-portfolio.vercel.app",
+  live: "https://omikuzigame.vercel.app",
 },
     
  {
