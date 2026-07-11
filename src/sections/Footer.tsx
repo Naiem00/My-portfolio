@@ -9,9 +9,34 @@ export default function Footer() {
     message: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  // Dynamic Free Email Submission Handler
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Form Data Submitted:", formData);
+    
+    try {
+      const response = await fetch("https://formsubmit.co/ajax/tsnayeem@gmail.com", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        },
+        body: JSON.stringify({
+          Name: formData.name,
+          Email: formData.email,
+          Message: formData.message
+        })
+      });
+
+      if (response.ok) {
+        alert("Message sent successfully!");
+        setFormData({ name: "", email: "", message: "" }); // Form reset after success
+      } else {
+        alert("Something went wrong. Please try again.");
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      alert("Error sending message. Check your connection.");
+    }
   };
 
   // Get links from columns
