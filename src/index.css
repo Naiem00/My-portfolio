@@ -136,3 +136,24 @@
     transform: scaleX(1);
   }
 }
+
+#crisp-chat-box div[data-chat-status="default"] span[data-component="chat-icon"] {
+  background-image: url('/logo.png') !important;
+  background-size: contain !important;
+  background-position: center !important;
+  border-radius: 50% !important;
+  width: 100% !important;
+  height: 100% !important;
+  display: block !important;
+  background-color: transparent !important;
+}
+
+#crisp-chat-box div[data-chat-status="default"] span[data-component="chat-icon"] svg {
+  display: none !important;
+}
+
+#crisp-chat-box div[data-id="chat_bubble"] {
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
