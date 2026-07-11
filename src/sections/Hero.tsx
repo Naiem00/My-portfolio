@@ -1,9 +1,11 @@
 import { useRef, useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import AmberCascades from './AmberCascades';
 import LiquidGlassButton from '../components/LiquidGlassButton';
 import { heroConfig } from '../config';
 
 export default function Hero() {
+  const { t } = useTranslation();
   const titleRef = useRef<HTMLHeadingElement>(null);
   const [titleWidth, setTitleWidth] = useState<number>(0);
 
@@ -29,10 +31,7 @@ export default function Hero() {
       <AmberCascades />
       <div
         className="relative z-10 flex flex-col justify-between pointer-events-none"
-        style={{
-          height: '100%',
-          padding: '28vh 5vw 8vh',
-        }}
+        style={{ height: '100%', padding: '28vh 5vw 8vh' }}
       >
         <div>
           <h1
@@ -49,67 +48,55 @@ export default function Hero() {
               width: 'fit-content',
             }}
           >
-            {heroConfig.title}
+            {t('heroTitle')}
           </h1>
-          {heroConfig.subtitleLine1 && (
-            <p
-              style={{
-                fontFamily: "'GeistMono', monospace",
-                fontWeight: 200,
-                fontSize: 'clamp(15px, 1.5vw, 22px)',
-                lineHeight: 1.7,
-                letterSpacing: '-0.3px',
-                color: '#ffffff',
-                margin: '0 0 12px 0',
-                width: titleWidth || 'auto',
-                maxWidth: '100%',
-                textShadow: '0 2px 12px rgba(0,0,0,0.6)',
-              }}
-            >
-              {heroConfig.subtitleLine1}
-            </p>
-          )}
-          {heroConfig.subtitleLine2 && (
-            <p
-              style={{
-                fontFamily: "'GeistMono', monospace",
-                fontWeight: 200,
-                fontSize: 'clamp(15px, 1.5vw, 22px)',
-                lineHeight: 1.7,
-                letterSpacing: '-0.3px',
-                color: '#ffffff',
-                margin: 0,
-                width: titleWidth || 'auto',
-                maxWidth: '100%',
-                textShadow: '0 2px 12px rgba(0,0,0,0.6)',
-              }}
-            >
-              {heroConfig.subtitleLine2}
-            </p>
-          )}
+          
+          <p
+            style={{
+              fontFamily: "'GeistMono', monospace",
+              fontWeight: 200,
+              fontSize: 'clamp(15px, 1.5vw, 22px)',
+              lineHeight: 1.7,
+              letterSpacing: '-0.3px',
+              color: '#ffffff',
+              margin: '0 0 12px 0',
+              width: titleWidth || 'auto',
+              maxWidth: '100%',
+              textShadow: '0 2px 12px rgba(0,0,0,0.6)',
+            }}
+          >
+            {t('heroSub1')}
+          </p>
+          
+          <p
+            style={{
+              fontFamily: "'GeistMono', monospace",
+              fontWeight: 200,
+              fontSize: 'clamp(15px, 1.5vw, 22px)',
+              lineHeight: 1.7,
+              letterSpacing: '-0.3px',
+              color: '#ffffff',
+              margin: 0,
+              width: titleWidth || 'auto',
+              maxWidth: '100%',
+              textShadow: '0 2px 12px rgba(0,0,0,0.6)',
+            }}
+          >
+            {t('heroSub2')}
+          </p>
         </div>
 
-        {/* Buttons Container - Side by Side */}
         {heroConfig.ctaText && (
           <div 
-            style={{ 
-              display: 'flex', 
-              justifyContent: 'center', 
-              gap: '16px',
-              flexWrap: 'wrap',
-            }} 
+            style={{ display: 'flex', justifyContent: 'center', gap: '16px', flexWrap: 'wrap' }} 
             className="pointer-events-auto"
           >
-            {/* View Projects Button */}
             <LiquidGlassButton
-              onClick={() => {
-                document.querySelector('#alumni')?.scrollIntoView({ behavior: 'smooth' });
-              }}
+              onClick={() => document.querySelector('#alumni')?.scrollIntoView({ behavior: 'smooth' })}
             >
-              {heroConfig.ctaText}
+              {t('ctaView')}
             </LiquidGlassButton>
 
-            {/* Download CV Button - NEW */}
             <a
               href={heroConfig.resumeUrl}
               download
@@ -127,7 +114,6 @@ export default function Hero() {
                 letterSpacing: '0.05em',
                 border: '1px solid rgba(255, 255, 255, 0.3)',
                 backdropFilter: 'blur(12px)',
-                WebkitBackdropFilter: 'blur(12px)',
                 borderRadius: '9999px',
                 cursor: 'pointer',
                 transition: 'all 0.3s ease',
@@ -141,7 +127,7 @@ export default function Hero() {
                 e.currentTarget.style.background = 'transparent';
               }}
             >
-              Download CV
+              {t('ctaDownload')}
             </a>
           </div>
         )}
