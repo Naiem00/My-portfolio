@@ -7,7 +7,6 @@ import CinematicVision from './sections/CinematicVision';
 import AlumniArchives from './sections/AlumniArchives';
 import Footer from './sections/Footer';
 import CapabilityDetail from './sections/CapabilityDetail';
-
 function HomePage() {
   return (
     <div
