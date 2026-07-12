@@ -10,13 +10,20 @@ export default function Navigation() {
     const handleScroll = () => {
       setScrolled(window.scrollY > 80);
     };
+
     window.addEventListener('scroll', handleScroll, { passive: true });
+
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+  const handleClick = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    href: string
+  ) => {
     e.preventDefault();
+
     const el = document.querySelector(href);
+
     if (el) {
       el.scrollIntoView({ behavior: 'smooth' });
     }
@@ -38,9 +45,12 @@ export default function Navigation() {
         padding: '0 5vw',
         backgroundColor: scrolled ? 'rgba(10, 10, 10, 0.95)' : 'transparent',
         backdropFilter: scrolled ? 'blur(8px)' : 'none',
-        borderBottom: scrolled ? '1px solid rgba(255, 255, 255, 0.05)' : 'none',
+        borderBottom: scrolled
+          ? '1px solid rgba(255,255,255,0.05)'
+          : 'none',
       }}
     >
+      {/* Brand */}
       <a
         href="#hero"
         onClick={(e) => handleClick(e, '#hero')}
@@ -52,10 +62,14 @@ export default function Navigation() {
           letterSpacing: '-0.5px',
         }}
       >
-        {i18n.language === 'ja' ? t('heroTitle') : siteConfig.brandName}
+        {t('brandName')}
       </a>
 
-      <div className="hidden md:flex items-center" style={{ gap: 40 }}>
+      {/* Navigation */}
+      <div
+        className="hidden md:flex items-center"
+        style={{ gap: 40 }}
+      >
         {navigationConfig.links.map((link) => (
           <a
             key={link.label}
@@ -63,27 +77,36 @@ export default function Navigation() {
             onClick={(e) => handleClick(e, link.href)}
             className="nav-link"
           >
-            {/* ডাইনামিক কি: nav + About, nav + Skills ইত্যাদি */}
             {t(`nav${link.label}`)}
           </a>
         ))}
       </div>
 
-      <div className="flex items-center" style={{ gap: 24 }}>
+      {/* Right Side */}
+      <div
+        className="flex items-center"
+        style={{ gap: 24 }}
+      >
         <div className="flex gap-2 font-mono text-xs select-none">
           <button
             onClick={() => changeLanguage('en')}
             className={`transition-colors duration-300 hover:text-white ${
-              i18n.language === 'en' ? 'text-white underline underline-offset-4 font-bold' : 'text-zinc-500'
+              i18n.language === 'en'
+                ? 'text-white underline underline-offset-4 font-bold'
+                : 'text-zinc-500'
             }`}
           >
             EN
           </button>
+
           <span className="text-zinc-700">|</span>
+
           <button
             onClick={() => changeLanguage('ja')}
             className={`transition-colors duration-300 hover:text-white ${
-              i18n.language === 'ja' ? 'text-white underline underline-offset-4 font-bold' : 'text-zinc-500'
+              i18n.language === 'ja'
+                ? 'text-white underline underline-offset-4 font-bold'
+                : 'text-zinc-500'
             }`}
           >
             JA
