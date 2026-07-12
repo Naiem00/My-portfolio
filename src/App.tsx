@@ -8,14 +8,16 @@ import CinematicVision from './sections/CinematicVision';
 import AlumniArchives from './sections/AlumniArchives';
 import Footer from './sections/Footer';
 import CapabilityDetail from './sections/CapabilityDetail';
+import ThemeToggle from './components/ThemeToggle';
 
 function HomePage() {
   return (
     <div
       style={{
-        background: '#0a0a0a',
+        background: 'var(--bg-primary)',
         minHeight: '100vh',
         overflowX: 'hidden',
+        transition: 'background-color 0.3s ease',
       }}
     >
       <Navigation />
@@ -28,6 +30,8 @@ function HomePage() {
         <AlumniArchives />
         <Footer />
       </main>
+      
+      <ThemeToggle />
     </div>
   );
 }
