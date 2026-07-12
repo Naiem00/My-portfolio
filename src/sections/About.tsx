@@ -152,7 +152,7 @@ export default function About() {
                   inset: 0,
                   width: '100%',
                   height: '100%',
-                  transition: 'opacity 1s ease-in-out',
+                  transition: 'opacity 1.5s ease-in-out', 
                   opacity: index === currentSlide ? 1 : 0,
                   zIndex: index === currentSlide ? 1 : 0,
                   pointerEvents: index === currentSlide ? 'auto' : 'none',
