@@ -6,7 +6,6 @@ import About from './sections/About';
 import Curriculum from './sections/Curriculum';
 import CinematicVision from './sections/CinematicVision';
 import AlumniArchives from './sections/AlumniArchives';
-import { Vlog } from './components/Vlog.tsx';
 import Footer from './sections/Footer';
 import CapabilityDetail from './sections/CapabilityDetail';
 
@@ -27,7 +26,6 @@ function HomePage() {
         <Curriculum />
         <CinematicVision />
         <AlumniArchives />
-        <Vlog />
         <Footer />
       </main>
     </div>
