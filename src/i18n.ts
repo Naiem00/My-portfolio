@@ -4,6 +4,8 @@ import { initReactI18next } from 'react-i18next';
 const resources = {
   en: {
     translation: {
+      brandName: "Rahman",
+      
       navAbout: "About",
       navSkills: "Skills",
       navShowreel: "Showreel",
@@ -42,6 +44,8 @@ const resources = {
   },
   ja: {
     translation: {
+      brandName: "Rahman",
+      
       navAbout: "経歴",
       navSkills: "スキル",
       navShowreel: "ショーリール",
@@ -49,7 +53,7 @@ const resources = {
       navContact: "お問い合わせ",
       ctaHire: "採用依頼",
       
-      heroTitle: "ナイエム・ナイムール",
+      heroTitle: "Naiem Naimur",
       heroSub1: "日本を拠点とするジュニアソフトウェアエンジニア。",
       heroSub2: "React、TypeScript、Java、Spring Bootを使ったモダンなWebアプリを開発。",
       ctaView: "プロジェクトを見る",
