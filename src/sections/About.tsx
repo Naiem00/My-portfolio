@@ -139,9 +139,8 @@ export default function About() {
             style={{ 
               position: 'relative', 
               width: '100%', 
-              height: 'clamp(400px, 55vh, 600px)', 
+              height: 'clamp(400px, 60vh, 650px)', 
               backgroundColor: '#121212',
-              border: '1px solid rgba(255, 255, 255, 0.05)',
               overflow: 'hidden'
             }}
           >
@@ -165,8 +164,8 @@ export default function About() {
                   style={{
                     width: '100%',
                     height: '100%',
-                    objectFit: 'cover',
-                    opacity: 0.4,
+                    objectFit: 'contain',
+                    opacity: 0.9,
                   }}
                 />
                 
@@ -174,7 +173,7 @@ export default function About() {
                   style={{
                     position: 'absolute',
                     inset: 0,
-                    background: 'linear-gradient(to top, rgba(10,10,10,0.95) 0%, rgba(10,10,10,0.6) 50%, transparent 100%)',
+                    background: 'linear-gradient(to top, rgba(10,10,10,0.85) 0%, rgba(10,10,10,0.1) 40%, transparent 100%)',
                     zIndex: 1
                   }} 
                 />
@@ -197,7 +196,7 @@ export default function About() {
                       marginBottom: '12px',
                       letterSpacing: '0.02em',
                       color: '#ffffff',
-                      textShadow: '0 2px 8px rgba(0,0,0,0.8)'
+                      textShadow: '0 2px 10px rgba(0,0,0,0.9)'
                     }}
                   >
                     {t(slide.titleKey)}
@@ -206,11 +205,11 @@ export default function About() {
                     style={{ 
                       fontFamily: "'Inter', sans-serif", 
                       fontSize: 'clamp(14px, 1.8vw, 16px)', 
-                      fontWeight: 200, 
+                      fontWeight: 300, 
                       color: '#ffffff', 
                       maxWidth: '650px',
                       lineHeight: 1.6,
-                      textShadow: '0 2px 6px rgba(0,0,0,0.8)'
+                      textShadow: '0 2px 8px rgba(0,0,0,0.9)'
                     }}
                   >
                     {t(slide.descKey)}
@@ -218,35 +217,83 @@ export default function About() {
                 </div>
               </div>
             ))}
-            
-            {/* Navigation buttons and indicators remain same */}
+
             <button
               onClick={() => setCurrentSlide((prev) => (prev - 1 + vlogConfig.slides.length) % vlogConfig.slides.length)}
-              style={{ position: 'absolute', top: '50%', left: '20px', transform: 'translateY(-50%)', zIndex: 10, background: 'rgba(0,0,0,0.5)', border: '1px solid rgba(255,255,255,0.2)', color: '#fff', width: '40px', height: '40px', borderRadius: '50%', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '18px', transition: 'all 0.2s ease' }}
+              style={{
+                position: 'absolute',
+                top: '50%',
+                left: '24px',
+                transform: 'translateY(-50%)',
+                zIndex: 10,
+                background: 'rgba(0,0,0,0.6)',
+                border: '1px solid rgba(255,255,255,0.2)',
+                color: '#fff',
+                width: '44px',
+                height: '44px',
+                borderRadius: '50%',
+                cursor: 'pointer',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                fontSize: '20px',
+                transition: 'all 0.2s ease'
+              }}
               onMouseEnter={(e) => { e.currentTarget.style.background = '#ffffff'; e.currentTarget.style.color = '#000000'; }}
-              onMouseLeave={(e) => { e.currentTarget.style.background = 'rgba(0,0,0,0.5)'; e.currentTarget.style.color = '#ffffff'; }}
+              onMouseLeave={(e) => { e.currentTarget.style.background = 'rgba(0,0,0,0.6)'; e.currentTarget.style.color = '#ffffff'; }}
             >
               &larr;
             </button>
+            
             <button
               onClick={() => setCurrentSlide((prev) => (prev + 1) % vlogConfig.slides.length)}
-              style={{ position: 'absolute', top: '50%', right: '20px', transform: 'translateY(-50%)', zIndex: 10, background: 'rgba(0,0,0,0.5)', border: '1px solid rgba(255,255,255,0.2)', color: '#fff', width: '40px', height: '40px', borderRadius: '50%', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '18px', transition: 'all 0.2s ease' }}
+              style={{
+                position: 'absolute',
+                top: '50%',
+                right: '24px',
+                transform: 'translateY(-50%)',
+                zIndex: 10,
+                background: 'rgba(0,0,0,0.6)',
+                border: '1px solid rgba(255,255,255,0.2)',
+                color: '#fff',
+                width: '44px',
+                height: '44px',
+                borderRadius: '50%',
+                cursor: 'pointer',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                fontSize: '20px',
+                transition: 'all 0.2s ease'
+              }}
               onMouseEnter={(e) => { e.currentTarget.style.background = '#ffffff'; e.currentTarget.style.color = '#000000'; }}
-              onMouseLeave={(e) => { e.currentTarget.style.background = 'rgba(0,0,0,0.5)'; e.currentTarget.style.color = '#ffffff'; }}
+              onMouseLeave={(e) => { e.currentTarget.style.background = 'rgba(0,0,0,0.6)'; e.currentTarget.style.color = '#ffffff'; }}
             >
               &rarr;
             </button>
-            <div style={{ position: 'absolute', bottom: '20px', right: '20px', zIndex: 10, display: 'flex', gap: '8px' }}>
+
+            <div style={{ position: 'absolute', bottom: '24px', right: '24px', zIndex: 10, display: 'flex', gap: '8px' }}>
               {vlogConfig.slides.map((_, index) => (
                 <button
                   key={index}
                   onClick={() => setCurrentSlide(index)}
-                  style={{ width: '8px', height: '8px', borderRadius: '50%', border: 'none', padding: 0, cursor: 'pointer', backgroundColor: index === currentSlide ? '#ffffff' : '#555555', transform: index === currentSlide ? 'scale(1.2)' : 'scale(1)', transition: 'all 0.3s ease' }}
+                  style={{
+                    width: '8px',
+                    height: '8px',
+                    borderRadius: '50%',
+                    border: 'none',
+                    padding: 0,
+                    cursor: 'pointer',
+                    backgroundColor: index === currentSlide ? '#ffffff' : 'rgba(255,255,255,0.4)',
+                    transform: index === currentSlide ? 'scale(1.2)' : 'scale(1)',
+                    transition: 'all 0.3s ease'
+                  }}
                 />
               ))}
             </div>
           </div>
         </div>
+
       </div>
     </section>
   );
