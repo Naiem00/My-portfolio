@@ -33,7 +33,7 @@ export default function About() {
             letterSpacing: '0.2em',
             textTransform: 'uppercase',
             color: '#888888',
-            marginBottom: '64px',
+            marginBottom: '32px',
           }}
         >
           {t('aboutLabel')}
@@ -49,7 +49,7 @@ export default function About() {
             color: '#ffffff',
           }}
         >
-          Naiem Naimur Rahman
+          {t('aboutSectionTitle', 'About Me')}
         </h2>
 
         <p
@@ -181,14 +181,16 @@ export default function About() {
                     width: '100%',
                     height: '100%',
                     objectFit: 'cover',
-                    opacity: 0.55,
+                    opacity: 0.4,
                   }}
                 />
+                
                 <div 
                   style={{
                     position: 'absolute',
                     inset: 0,
-                    background: 'linear-gradient(to top, #0a0a0a 5%, rgba(10,10,10,0.3) 60%, transparent 100%)'
+                    background: 'linear-gradient(to top, rgba(10,10,10,0.95) 0%, rgba(10,10,10,0.6) 50%, transparent 100%)',
+                    zIndex: 1
                   }} 
                 />
                 
@@ -208,7 +210,9 @@ export default function About() {
                       fontSize: 'clamp(24px, 3vw, 36px)', 
                       fontWeight: 400, 
                       marginBottom: '12px',
-                      letterSpacing: '0.02em'
+                      letterSpacing: '0.02em',
+                      color: '#ffffff',
+                      textShadow: '0 2px 8px rgba(0,0,0,0.8)'
                     }}
                   >
                     {t(slide.titleKey)}
@@ -218,9 +222,10 @@ export default function About() {
                       fontFamily: "'Inter', sans-serif", 
                       fontSize: 'clamp(14px, 1.8vw, 16px)', 
                       fontWeight: 200, 
-                      color: '#cccccc', 
+                      color: '#ffffff', 
                       maxWidth: '650px',
-                      lineHeight: 1.6
+                      lineHeight: 1.6,
+                      textShadow: '0 2px 6px rgba(0,0,0,0.8)'
                     }}
                   >
                     {t(slide.descKey)}
@@ -237,8 +242,8 @@ export default function About() {
                 left: '20px',
                 transform: 'translateY(-50%)',
                 zIndex: 10,
-                background: 'rgba(0,0,0,0.4)',
-                border: '1px solid rgba(255,255,255,0.1)',
+                background: 'rgba(0,0,0,0.5)',
+                border: '1px solid rgba(255,255,255,0.2)',
                 color: '#fff',
                 width: '40px',
                 height: '40px',
@@ -251,7 +256,7 @@ export default function About() {
                 transition: 'all 0.2s ease'
               }}
               onMouseEnter={(e) => { e.currentTarget.style.background = '#ffffff'; e.currentTarget.style.color = '#000000'; }}
-              onMouseLeave={(e) => { e.currentTarget.style.background = 'rgba(0,0,0,0.4)'; e.currentTarget.style.color = '#ffffff'; }}
+              onMouseLeave={(e) => { e.currentTarget.style.background = 'rgba(0,0,0,0.5)'; e.currentTarget.style.color = '#ffffff'; }}
             >
               &larr;
             </button>
@@ -264,8 +269,8 @@ export default function About() {
                 right: '20px',
                 transform: 'translateY(-50%)',
                 zIndex: 10,
-                background: 'rgba(0,0,0,0.4)',
-                border: '1px solid rgba(255,255,255,0.1)',
+                background: 'rgba(0,0,0,0.5)',
+                border: '1px solid rgba(255,255,255,0.2)',
                 color: '#fff',
                 width: '40px',
                 height: '40px',
@@ -278,7 +283,7 @@ export default function About() {
                 transition: 'all 0.2s ease'
               }}
               onMouseEnter={(e) => { e.currentTarget.style.background = '#ffffff'; e.currentTarget.style.color = '#000000'; }}
-              onMouseLeave={(e) => { e.currentTarget.style.background = 'rgba(0,0,0,0.4)'; e.currentTarget.style.color = '#ffffff'; }}
+              onMouseLeave={(e) => { e.currentTarget.style.background = 'rgba(0,0,0,0.5)'; e.currentTarget.style.color = '#ffffff'; }}
             >
               &rarr;
             </button>

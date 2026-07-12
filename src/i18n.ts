@@ -20,8 +20,7 @@ const resources = {
       ctaDownload: "Download CV",
 
       aboutLabel: "About Me",
-      aboutBio:
-        "I'm Naiem Naimur Rahman, a Junior Software Developer based in Toyama, Japan. I graduated from Sundai IT Business College in March 2026 with a specialization in IT. I'm passionate about building modern web applications with React, TypeScript, Java, and Spring Boot.",
+      aboutBio: "A dedicated Junior Software Developer based in Toyama, Japan. Graduated from Sundai IT Business College in March 2026 with a specialization in IT. Passionate about building modern web applications with React, TypeScript, Java, and Spring Boot.",
 
       eduLabel: "Education",
       eduText: "Sundai IT Business College - IT Expert Course (2024-2026)",
@@ -37,20 +36,16 @@ const resources = {
       skillsLabel: "Core Skills",
 
       frontendTitle: "Frontend Development",
-      frontendDesc:
-        "Building responsive user interfaces using React, TypeScript, and modern CSS frameworks like Tailwind.",
+      frontendDesc: "Building responsive user interfaces using React, TypeScript, and modern CSS frameworks like Tailwind.",
 
       backendTitle: "Backend Development",
-      backendDesc:
-        "Creating REST APIs using Node.js and Java. Working with authentication, databases, and server-side logic.",
+      backendDesc: "Creating REST APIs using Node.js and Java. Working with authentication, databases, and server-side logic.",
 
       javaTitle: "Java Development",
-      javaDesc:
-        "Developing applications and APIs using Java, focusing on clean code and OOP principles.",
+      javaDesc: "Developing applications and APIs using Java, focusing on clean code and OOP principles.",
 
       dbTitle: "Database & Git",
-      dbDesc:
-        "Working with MySQL and Git/GitHub for version control and data management.",
+      dbDesc: "Working with MySQL and Git/GitHub for version control and data management.",
 
       showreelLabel: "Showreel",
       showreelTitle: "A Glimpse Into My Work",
@@ -100,7 +95,7 @@ const resources = {
 
   ja: {
     translation: {
-      brandName: "Rahman",
+      brandName: "ラーマン",
 
       navAbout: "経歴",
       navSkills: "スキル",
@@ -109,7 +104,7 @@ const resources = {
       navContact: "お問い合わせ",
       ctaHire: "採用依頼",
 
-      heroTitle: "Naiem Naimur",
+      heroTitle: "ナイエム ナイムール",
       heroSub1: "日本を拠点とするジュニアソフトウェアエンジニア。",
       heroSub2: "React、TypeScript、Java、Spring Bootを使用したモダンなWebアプリケーションを開発しています。",
 
@@ -117,8 +112,7 @@ const resources = {
       ctaDownload: "履歴書をダウンロード",
 
       aboutLabel: "自己紹介",
-      aboutBio:
-        "ナイエム ナイムールです。富山県高岡市を拠点に活動するジュニアソフトウェアエンジニアです。2026年3月に駿台電子情報ビジネス専門学校 ITエキスパートコースを卒業しました。React、TypeScript、Java、Spring Bootを使用したモダンなWebアプリケーション開発に取り組んでいます。",
+      aboutBio: "富山県高岡市を拠点に活動するジュニアソフトウェアエンジニアです。2026年3月に駿台電子情報ビジネス専門学校 ITエキスパートコースを卒業しました。React、TypeScript、Java、Spring Bootを使用したモダンなWebアプリケーション開発に取り組んでいます。",
 
       eduLabel: "学歴",
       eduText: "駿台電子情報ビジネス専門学校 ITエキスパートコース (2024-2026)",
@@ -134,20 +128,16 @@ const resources = {
       skillsLabel: "スキル",
 
       frontendTitle: "フロントエンド開発",
-      frontendDesc:
-        "React、TypeScript、Tailwind CSSを使用したレスポンシブなUI開発。",
+      frontendDesc: "React、TypeScript、Tailwind CSSを使用したレスポンシブなUI開発。",
 
       backendTitle: "バックエンド開発",
-      backendDesc:
-        "Node.jsとJavaを使用したREST APIの開発、認証、データベース、サーバーサイドロジックの実装。",
+      backendDesc: "Node.jsとJavaを使用したREST APIの開発、認証、データベース、サーバーサイドロジックの実装。",
 
       javaTitle: "Java開発",
-      javaDesc:
-        "オブジェクト指向とクリーンコードを意識したJavaアプリケーション・API開発。",
+      javaDesc: "オブジェクト指向とクリーンコードを意識したJavaアプリケーション・API開発。",
 
       dbTitle: "データベース & Git",
-      dbDesc:
-        "MySQL、Git、GitHubを利用したデータ管理とバージョン管理。",
+      dbDesc: "MySQL、Git、GitHubを利用したデータ管理とバージョン管理。",
 
       showreelLabel: "ショーリール",
       showreelTitle: "作品の一部をご紹介",
@@ -191,7 +181,7 @@ const resources = {
       footerAvailable: "採用可能",
       footerPrivacy: "プライバシーポリシー",
       footerTerms: "利用規約",
-      footerCopyright: "© 2026 ナイエム・ラフマン. All rights reserved."
+      footerCopyright: "© 2026 ナイエム・ラーマン. All rights reserved."
     }
   }
 };
