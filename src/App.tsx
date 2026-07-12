@@ -6,6 +6,7 @@ import About from './sections/About';
 import Curriculum from './sections/Curriculum';
 import CinematicVision from './sections/CinematicVision';
 import AlumniArchives from './sections/AlumniArchives';
+import { Vlog } from './components/Vlog.tsx';
 import Footer from './sections/Footer';
 import CapabilityDetail from './sections/CapabilityDetail';
 
@@ -26,6 +27,7 @@ function HomePage() {
         <Curriculum />
         <CinematicVision />
         <AlumniArchives />
+        <Vlog />
         <Footer />
       </main>
     </div>
@@ -34,9 +36,7 @@ function HomePage() {
 
 export default function App() {
   
-  // Crisp AI Chatbot Integration
   useEffect(() => {
-    // React Router change ba multiple re-render-e jate chatbot script double double inject na hoy
     if (!(window as any).$crisp) {
       (window as any).$crisp = [];
       (window as any).CRISP_WEBSITE_ID = "534af1e4-536b-4367-8b26-d852e4a0dda8";

@@ -1,7 +1,3 @@
-// ============================================================
-// Site Configuration
-// ============================================================
-
 export interface SiteConfig {
   language: string;
   brandName: string;
@@ -11,10 +7,6 @@ export const siteConfig: SiteConfig = {
   language: "en",
   brandName: "Rahman",
 };
-
-// ============================================================
-// Navigation
-// ============================================================
 
 export interface NavLink {
   label: string;
@@ -37,10 +29,6 @@ export const navigationConfig: NavigationConfig = {
   ctaText: "Hire Me",
 };
 
-// ============================================================
-// Hero
-// ============================================================
-
 export interface HeroConfig {
   title: string;
   subtitleLine1: string;
@@ -57,10 +45,6 @@ export const heroConfig: HeroConfig = {
   ctaText: "View My Projects",
   resumeUrl: "/resume.pdf",
 };
-
-// ============================================================
-// About       
-// ============================================================
 
 export interface AboutConfig {
   sectionLabel: string;
@@ -83,10 +67,6 @@ export const aboutConfig: AboutConfig = {
     "JPET 532 (October 2024)",
   ],
 };
-
-// ============================================================
-// Capabilities
-// ============================================================
 
 export interface CapabilityItem {
   title: string;
@@ -134,10 +114,6 @@ export const capabilitiesConfig: CapabilitiesConfig = {
   ],
 };
 
-// ============================================================
-// Capability Detail
-// ============================================================
-
 export interface CapabilityDetailData {
   title: string;
   subtitle: string;
@@ -170,7 +146,6 @@ export const capabilityDetailConfig: CapabilityDetailConfig = {
         "I use GitHub for version control and project management.",
       ],
     },
-
     "frontend-development": {
       title: "Frontend Development",
       subtitle: "UI development and responsive design.",
@@ -181,7 +156,6 @@ export const capabilityDetailConfig: CapabilityDetailConfig = {
         "I improve step by step through real coding experience.",
       ],
     },
-
     "backend-development": {
       title: "Backend Development",
       subtitle: "API and server-side development.",
@@ -192,7 +166,6 @@ export const capabilityDetailConfig: CapabilityDetailConfig = {
         "I focus on understanding how server and client communicate.",
       ],
     },
-
     "java-development": {
       title: "Java Development",
       subtitle: "Object-oriented programming with Java.",
@@ -203,7 +176,6 @@ export const capabilityDetailConfig: CapabilityDetailConfig = {
         "I continuously practice Java through projects.",
       ],
     },
-
     "database-git": {
       title: "Database & Git",
       subtitle: "Version control and database basics.",
@@ -216,10 +188,6 @@ export const capabilityDetailConfig: CapabilityDetailConfig = {
     },
   },
 };
-
-// ============================================================
-// Showreel
-// ============================================================
 
 export interface ArchitectureConfig {
   sectionLabel: string;
@@ -236,10 +204,6 @@ export const architectureConfig: ArchitectureConfig = {
     "A collection of my projects and learning journey using modern web technologies.",
 };
 
-// ============================================================
-// Projects
-// ============================================================
-
 export interface ResearchProject {
   title: string;
   year: string;
@@ -248,6 +212,7 @@ export interface ResearchProject {
   github: string;
   live: string;
 }
+
 export interface ResearchConfig {
   sectionLabel: string;
   projects: ResearchProject[];
@@ -256,46 +221,77 @@ export interface ResearchConfig {
 export const researchConfig: ResearchConfig = {
   sectionLabel: "Projects",
   projects: [
-  {
-  title: "Calculator App",
-  year: "2026",
-  discipline: "Responsive Calculator",
-  image: "images/research-1.jpg",
-  github: "https://github.com/Naiem00/mobile-app/tree/main/03_4calculator",
-  live: "https://calc-pro-psi.vercel.app",
-},
-
- {
-  title: "Memo App",
-  year: "2026",
-  discipline: "Note Taking Application",
-  image: "images/research-2.jpg",
-  github: "https://github.com/Naiem00/mobile-app/tree/main/04_7memo",
-  live: "https://memo1-zeta.vercel.app",
-},
     {
-  title: "Omikuji Game",
-  year: "2026",
-  discipline: "Interactive Fortune Game",
-  image: "images/research-3.jpg",
-  github: "https://github.com/Naiem00/mobile-app/tree/main/10c_omikuji",
-  live: "https://omikuzigame.vercel.app",
-},
-
- {
-  title: "Time Guessing Quiz",
-  year: "2026",
-  discipline: "Interactive Quiz",
-  image: "images/research-4.jpg",
-  github: "https://github.com/Naiem00/mobile-app/tree/main/98_Time%20guessing%20quiz",
-  live: "https://timeguessingquiz.vercel.app",
-},
+      title: "Calculator App",
+      year: "2026",
+      discipline: "Responsive Calculator",
+      image: "images/research-1.jpg",
+      github: "https://github.com/Naiem00/mobile-app/tree/main/03_4calculator",
+      live: "https://calc-pro-psi.vercel.app",
+    },
+    {
+      title: "Memo App",
+      year: "2026",
+      discipline: "Note Taking Application",
+      image: "images/research-2.jpg",
+      github: "https://github.com/Naiem00/mobile-app/tree/main/04_7memo",
+      live: "https://memo1-zeta.vercel.app",
+    },
+    {
+      title: "Omikuji Game",
+      year: "2026",
+      discipline: "Interactive Fortune Game",
+      image: "images/research-3.jpg",
+      github: "https://github.com/Naiem00/mobile-app/tree/main/10c_omikuji",
+      live: "https://omikuzigame.vercel.app",
+    },
+    {
+      title: "Time Guessing Quiz",
+      year: "2026",
+      discipline: "Interactive Quiz",
+      image: "images/research-4.jpg",
+      github: "https://github.com/Naiem00/mobile-app/tree/main/98_Time%20guessing%20quiz",
+      live: "https://timeguessingquiz.vercel.app",
+    },
   ],
 };
 
-// ============================================================
-// Footer
-// ============================================================
+export interface HobbySlide {
+  titleKey: string;
+  descKey: string;
+  image: string;
+}
+
+export interface VlogConfig {
+  sectionLabelKey: string;
+  slides: HobbySlide[];
+}
+
+export const vlogConfig: VlogConfig = {
+  sectionLabelKey: "vlogTitle",
+  slides: [
+    {
+      titleKey: "vlogSlide1Title",
+      descKey: "vlogSlide1Desc",
+      image: "images/snow-explore.jpg",
+    },
+    {
+      titleKey: "vlogSlide2Title",
+      descKey: "vlogSlide2Desc",
+      image: "images/sakura-night.jpg",
+    },
+    {
+      titleKey: "vlogSlide3Title",
+      descKey: "vlogSlide3Desc",
+      image: "images/urban-view.jpg",
+    },
+    {
+      titleKey: "vlogSlide4Title",
+      descKey: "vlogSlide4Desc",
+      image: "images/sunset-sky.jpg",
+    },
+  ],
+};
 
 export interface FooterLink {
   label: string;

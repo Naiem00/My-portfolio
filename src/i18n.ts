@@ -70,6 +70,16 @@ const resources = {
       project4Title: "Time Guessing Quiz",
       project4Desc: "Interactive Quiz",
 
+      vlogTitle: "My Journey & Photography",
+      vlogSlide1Title: "Exploring Japan's Nature",
+      vlogSlide1Desc: "Embracing the breathtaking seasonal landscapes of Japan, from serene snow-covered mountains to vibrant outdoor adventures.",
+      vlogSlide2Title: "Night Photography & Aesthetics",
+      vlogSlide2Desc: "Capturing the magical essence of Japanese culture, focusing on stunning night views, cherry blossoms, and natural reflections.",
+      vlogSlide3Title: "Urban Exploration",
+      vlogSlide3Desc: "Observing cityscapes and modern architectures from creative perspectives, finding inspiration in everyday urban life.",
+      vlogSlide4Title: "Cinematic Skies & Editing",
+      vlogSlide4Desc: "Chasing golden sunsets and dramatic horizons, enhanced through meticulous digital image processing and lighting control.",
+
       footerHeading: "Let's Build Something Great",
       footerNameLabel: "Name",
       footerEmailLabel: "Email",
@@ -90,7 +100,7 @@ const resources = {
 
   ja: {
     translation: {
-      brandName: "ラーマン",
+      brandName: "Rahman",
 
       navAbout: "経歴",
       navSkills: "スキル",
@@ -99,7 +109,7 @@ const resources = {
       navContact: "お問い合わせ",
       ctaHire: "採用依頼",
 
-      heroTitle: "ナイエム ナイムル",
+      heroTitle: "Naiem Naimur",
       heroSub1: "日本を拠点とするジュニアソフトウェアエンジニア。",
       heroSub2: "React、TypeScript、Java、Spring Bootを使用したモダンなWebアプリケーションを開発しています。",
 
@@ -108,7 +118,7 @@ const resources = {
 
       aboutLabel: "自己紹介",
       aboutBio:
-        "ナイエム ナイムルです。富山県高岡市を拠点に活動するジュニアソフトウェアエンジニアです。2026年3月に駿台電子情報ビジネス専門学校 ITエキスパートコースを卒業しました。React、TypeScript、Java、Spring Bootを使用したモダンなWebアプリケーション開発に取り組んでいます。",
+        "ナイエム ナイムールです。富山県高岡市を拠点に活動するジュニアソフトウェアエンジニアです。2026年3月に駿台電子情報ビジネス専門学校 ITエキスパートコースを卒業しました。React、TypeScript、Java、Spring Bootを使用したモダンなWebアプリケーション開発に取り組んでいます。",
 
       eduLabel: "学歴",
       eduText: "駿台電子情報ビジネス専門学校 ITエキスパートコース (2024-2026)",
@@ -156,6 +166,16 @@ const resources = {
 
       project4Title: "時間当てクイズ",
       project4Desc: "インタラクティブクイズ",
+
+      vlogTitle: "ジャーニー ＆ フォトグラフィー",
+      vlogSlide1Title: "日本の自然探訪",
+      vlogSlide1Desc: "一面の銀世界から鮮やかな風景まで、日本の息をのむような四季折々の美しさに触れる旅。",
+      vlogSlide2Title: "夜間撮影と美学",
+      vlogSlide2Desc: "美しい夜桜や水面の反射など、日本の文化と自然が織りなす幻想的な瞬間を切り取る夜間撮影。",
+      vlogSlide3Title: "都市探訪",
+      vlogSlide3Desc: "都会の街並みや近代建築をクリエイティブな視点から観察し、日常の都市生活の中にインスピレーションを見出す。",
+      vlogSlide4Title: "シネマティックスカイ ＆ 編集",
+      vlogSlide4Desc: "黄金色に染まる夕暮れやドラマチックな空の表情を追い求め、デジタル画像処理とライティング調整で洗練された作品に仕上げる。",
 
       footerHeading: "一緒に素晴らしいものを作りましょう",
       footerNameLabel: "お名前",
