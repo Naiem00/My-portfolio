@@ -128,26 +128,33 @@ export default function AlumniArchives() {
                 style={{ aspectRatio: '1/1' }}
               >
                 {project.image && (
-                  <img
-                    src={project.image}
-                    alt={t(project.titleKey)}
-                    className="w-full h-full object-cover transition-all duration-700"
-                    style={{
-                      opacity: 0.5,
-                      filter: 'grayscale(100%)',
-                    }}
-                    onMouseEnter={(e) => {
-                      (e.target as HTMLImageElement).style.opacity = '1';
-                      (e.target as HTMLImageElement).style.filter = 'grayscale(0%)';
-                      (e.target as HTMLImageElement).style.transform = 'scale(1.04)';
-                    }}
-                    onMouseLeave={(e) => {
-                      (e.target as HTMLImageElement).style.opacity = '0.5';
-                      (e.target as HTMLImageElement).style.filter = 'grayscale(100%)';
-                      (e.target as HTMLImageElement).style.transform = 'scale(1)';
-                    }}
-                    loading="lazy"
-                  />
+                  <a
+                    href={project.live}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block w-full h-full"
+                  >
+                    <img
+                      src={project.image}
+                      alt={t(project.titleKey)}
+                      className="w-full h-full object-cover transition-all duration-700"
+                      style={{
+                        opacity: 0.5,
+                        filter: 'grayscale(100%)',
+                      }}
+                      onMouseEnter={(e) => {
+                        (e.target as HTMLImageElement).style.opacity = '1';
+                        (e.target as HTMLImageElement).style.filter = 'grayscale(0%)';
+                        (e.target as HTMLImageElement).style.transform = 'scale(1.04)';
+                      }}
+                      onMouseLeave={(e) => {
+                        (e.target as HTMLImageElement).style.opacity = '0.5';
+                        (e.target as HTMLImageElement).style.filter = 'grayscale(100%)';
+                        (e.target as HTMLImageElement).style.transform = 'scale(1)';
+                      }}
+                      loading="lazy"
+                    />
+                  </a>
                 )}
               </div>
               {/* Title + GitHub Icon */}
