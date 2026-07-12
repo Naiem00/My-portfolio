@@ -1,10 +1,18 @@
 import { useEffect, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import gsap from 'gsap';
-import { capabilitiesConfig } from '../config';
+
+const CAPABILITIES = [
+  { slug: 'frontend-development', image: 'images/capability-1.jpg' },
+  { slug: 'backend-development', image: 'images/capability-2.jpg' },
+  { slug: 'java-development', image: 'images/capability-3.jpg' },
+  { slug: 'database-git', image: 'images/capability-4.jpg' },
+];
 
 export default function Curriculum() {
   const navigate = useNavigate();
+  const { t } = useTranslation();
   const sectionRef = useRef<HTMLDivElement>(null);
   const itemRefs = useRef<(HTMLDivElement | null)[]>([]);
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
@@ -43,9 +51,19 @@ export default function Curriculum() {
     };
   }, []);
 
-  if (!capabilitiesConfig.sectionLabel && capabilitiesConfig.items.length === 0) {
-    return null;
-  }
+  const titles = [
+    t('frontendTitle'),
+    t('backendTitle'),
+    t('javaTitle'),
+    t('dbTitle'),
+  ];
+
+  const descriptions = [
+    t('frontendDesc'),
+    t('backendDesc'),
+    t('javaDesc'),
+    t('dbDesc'),
+  ];
 
   return (
     <section
@@ -59,22 +77,20 @@ export default function Curriculum() {
       }}
     >
       <div style={{ maxWidth: 1200, margin: '0 auto' }}>
-        {capabilitiesConfig.sectionLabel && (
-          <div
-            className="mb-6"
-            style={{
-              fontFamily: "'Inter', sans-serif",
-              fontSize: 12,
-              fontWeight: 300,
-              letterSpacing: '3px',
-              textTransform: 'uppercase',
-              color: '#dadada',
-              opacity: 0.6,
-            }}
-          >
-            {capabilitiesConfig.sectionLabel}
-          </div>
-        )}
+        <div
+          className="mb-6"
+          style={{
+            fontFamily: "'Inter', sans-serif",
+            fontSize: 12,
+            fontWeight: 300,
+            letterSpacing: '3px',
+            textTransform: 'uppercase',
+            color: '#dadada',
+            opacity: 0.6,
+          }}
+        >
+          {t('skillsLabel')}
+        </div>
         <div
           className="mb-20"
           style={{
@@ -85,13 +101,13 @@ export default function Curriculum() {
         />
 
         <div className="flex flex-col" style={{ gap: 100 }}>
-          {capabilitiesConfig.items.map((discipline, i) => (
+          {CAPABILITIES.map((cap, i) => (
             <div
-              key={discipline.title}
+              key={cap.slug}
               ref={(el) => { itemRefs.current[i] = el; }}
               className="flex flex-col md:flex-row md:items-start"
               style={{ gap: '40px', cursor: 'pointer' }}
-              onClick={() => navigate(`/capability/${discipline.slug}`)}
+              onClick={() => navigate(`/capability/${cap.slug}`)}
               onMouseEnter={() => setHoveredIndex(i)}
               onMouseLeave={() => setHoveredIndex(null)}
             >
@@ -109,7 +125,7 @@ export default function Curriculum() {
                     transition: 'color 0.4s ease',
                   }}
                 >
-                  {discipline.title}
+                  {titles[i]}
                 </h3>
               </div>
               <div
@@ -123,7 +139,6 @@ export default function Curriculum() {
                   transition: 'min-height 0.4s ease',
                 }}
               >
-                {/* Description text — fades out on hover */}
                 <p
                   style={{
                     fontFamily: "'Inter', sans-serif",
@@ -137,14 +152,13 @@ export default function Curriculum() {
                     transition: 'opacity 0.35s ease',
                   }}
                 >
-                  {discipline.description}
+                  {descriptions[i]}
                 </p>
 
-                {/* Image — fades in on hover */}
-                {discipline.image && (
+                {cap.image && (
                   <img
-                    src={discipline.image}
-                    alt={discipline.title}
+                    src={cap.image}
+                    alt={titles[i]}
                     style={{
                       position: 'absolute',
                       inset: 0,

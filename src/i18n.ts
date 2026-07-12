@@ -52,7 +52,39 @@ const resources = {
       dbDesc:
         "Working with MySQL and Git/GitHub for version control and data management.",
 
-      projectsLabel: "Projects"
+      showreelLabel: "Showreel",
+      showreelTitle: "A Glimpse Into My Work",
+      showreelDesc: "A collection of my projects and learning journey using modern web technologies.",
+
+      projectsLabel: "Projects",
+
+      project1Title: "Calculator App",
+      project1Desc: "Responsive Calculator",
+
+      project2Title: "Memo App",
+      project2Desc: "Note Taking Application",
+
+      project3Title: "Omikuji Game",
+      project3Desc: "Interactive Fortune Game",
+
+      project4Title: "Time Guessing Quiz",
+      project4Desc: "Interactive Quiz",
+
+      footerHeading: "Let's Build Something Great",
+      footerNameLabel: "Name",
+      footerEmailLabel: "Email",
+      footerMessageLabel: "Message",
+      footerSendButton: "Send Message",
+      footerSending: "Sending...",
+      footerSuccessMsg: "Thank you! Your message has been sent successfully.",
+      footerErrorMsg: "Something went wrong. Please try again.",
+      footerNetworkError: "Error sending message. Please check your connection.",
+      footerConnectTitle: "Other Ways to Connect",
+      footerAvailability: "Availability",
+      footerAvailable: "Available for Hire",
+      footerPrivacy: "Privacy Policy",
+      footerTerms: "Terms of Service",
+      footerCopyright: "© 2026 Naiem Rahman. All rights reserved."
     }
   },
 
@@ -107,7 +139,39 @@ const resources = {
       dbDesc:
         "MySQL、Git、GitHubを利用したデータ管理とバージョン管理。",
 
-      projectsLabel: "プロジェクト"
+      showreelLabel: "ショーリール",
+      showreelTitle: "作品の一部をご紹介",
+      showreelDesc: "モダンなWeb技術を使用したプロジェクトと学習の旅のコレクション。",
+
+      projectsLabel: "プロジェクト",
+
+      project1Title: "電卓アプリ",
+      project1Desc: "レスポンシブ電卓",
+
+      project2Title: "メモアプリ",
+      project2Desc: "メモ帳アプリケーション",
+
+      project3Title: "おみくじゲーム",
+      project3Desc: "インタラクティブな運勢ゲーム",
+
+      project4Title: "時間当てクイズ",
+      project4Desc: "インタラクティブクイズ",
+
+      footerHeading: "一緒に素晴らしいものを作りましょう",
+      footerNameLabel: "お名前",
+      footerEmailLabel: "メールアドレス",
+      footerMessageLabel: "メッセージ",
+      footerSendButton: "送信",
+      footerSending: "送信中...",
+      footerSuccessMsg: "ありがとうございます！メッセージが正常に送信されました。",
+      footerErrorMsg: "エラーが発生しました。もう一度お試しください。",
+      footerNetworkError: "メッセージの送信中にエラーが発生しました。接続を確認してください。",
+      footerConnectTitle: "その他の連絡方法",
+      footerAvailability: "稼働状況",
+      footerAvailable: "採用可能",
+      footerPrivacy: "プライバシーポリシー",
+      footerTerms: "利用規約",
+      footerCopyright: "© 2026 ナイエム・ラフマン. All rights reserved."
     }
   }
 };

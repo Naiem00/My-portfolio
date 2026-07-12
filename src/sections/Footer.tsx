@@ -1,7 +1,9 @@
 import React, { useState } from "react";
-import { footerConfig } from '../config';
+import { useTranslation } from 'react-i18next';
 
 export default function Footer() {
+  const { t } = useTranslation();
+
   // Form handler hooks mapping
   const [formData, setFormData] = useState({
     name: "",
@@ -21,7 +23,7 @@ export default function Footer() {
     e.preventDefault();
     setIsSending(true);
     setSubmitStatus({ type: null, msg: "" });
-    
+
     try {
       const response = await fetch("https://formsubmit.co/ajax/tsnayeem@gmail.com", {
         method: "POST",
@@ -38,26 +40,18 @@ export default function Footer() {
       });
 
       if (response.ok) {
-        setSubmitStatus({ type: "success", msg: "Thank you! Your message has been sent successfully." });
-        setFormData({ name: "", email: "", message: "" }); // Form reset after success
+        setSubmitStatus({ type: "success", msg: t('footerSuccessMsg') });
+        setFormData({ name: "", email: "", message: "" });
       } else {
-        setSubmitStatus({ type: "error", msg: "Something went wrong. Please try again." });
+        setSubmitStatus({ type: "error", msg: t('footerErrorMsg') });
       }
     } catch (error) {
       console.error("Error submitting form:", error);
-      setSubmitStatus({ type: "error", msg: "Error sending message. Please check your connection." });
+      setSubmitStatus({ type: "error", msg: t('footerNetworkError') });
     } finally {
       setIsSending(false);
     }
   };
-
-  // Get links from columns
-  const contactColumn = footerConfig.columns.find(col => col.title === 'Contact');
-  const contactLinks = contactColumn?.links || [];
-  
-  const emailLink = contactLinks.find(l => l.label === 'Email')?.href || '#';
-  const githubLink = contactLinks.find(l => l.label === 'GitHub')?.href || '#';
-  const linkedinLink = contactLinks.find(l => l.label === 'LinkedIn')?.href || '#';
 
   return (
     <footer
@@ -79,17 +73,17 @@ export default function Footer() {
             letterSpacing: '-0.02em',
           }}
         >
-          {footerConfig.heading}
+          {t('footerHeading')}
         </h2>
 
         {/* Master Integration Layout Split */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 mb-20">
-          
-          {/* Left Side: Contact Form (Screenshot layout standard match) */}
+
+          {/* Left Side: Contact Form */}
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
               <label htmlFor="name" className="block font-mono text-xs tracking-widest uppercase mb-2" style={{ color: '#dadada', opacity: 0.6 }}>
-                Name
+                {t('footerNameLabel')}
               </label>
               <input
                 type="text"
@@ -104,7 +98,7 @@ export default function Footer() {
 
             <div>
               <label htmlFor="email" className="block font-mono text-xs tracking-widest uppercase mb-2" style={{ color: '#dadada', opacity: 0.6 }}>
-                Email
+                {t('footerEmailLabel')}
               </label>
               <input
                 type="email"
@@ -119,7 +113,7 @@ export default function Footer() {
 
             <div>
               <label htmlFor="message" className="block font-mono text-xs tracking-widest uppercase mb-2" style={{ color: '#dadada', opacity: 0.6 }}>
-                Message
+                {t('footerMessageLabel')}
               </label>
               <textarea
                 id="message"
@@ -151,27 +145,27 @@ export default function Footer() {
               {isSending ? (
                 <>
                   <span className="w-4 h-4 border-2 border-slate-950 border-t-transparent rounded-full animate-spin"></span>
-                  Sending...
+                  {t('footerSending')}
                 </>
               ) : (
-                "Send Message"
+                t('footerSendButton')
               )}
             </button>
           </form>
 
-          {/* Right Side: Your Original Contact & Availability Info Links */}
+          {/* Right Side: Contact & Availability Info */}
           <div className="space-y-12">
             <div>
               <div
                 className="font-mono text-xs tracking-widest uppercase mb-6"
                 style={{ color: '#dadada', opacity: 0.6 }}
               >
-                Other Ways to Connect
+                {t('footerConnectTitle')}
               </div>
               <div className="space-y-4">
                 {/* Email */}
                 <a
-                  href={emailLink}
+                  href="mailto:tsnayeem@gmail.com"
                   className="group flex items-center gap-3 font-mono text-sm"
                   style={{ color: '#dadada' }}
                 >
@@ -189,12 +183,12 @@ export default function Footer() {
                     <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
                     <polyline points="22,6 12,13 2,6" />
                   </svg>
-                  Email ({emailLink.replace('mailto:', '')})
+                  Email (tsnayeem@gmail.com)
                 </a>
 
                 {/* GitHub */}
                 <a
-                  href={githubLink}
+                  href="https://github.com/Naiem00"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group flex items-center gap-3 font-mono text-sm"
@@ -214,7 +208,7 @@ export default function Footer() {
 
                 {/* LinkedIn */}
                 <a
-                  href={linkedinLink}
+                  href="https://www.linkedin.com/in/naiem-rahman-2b96583aa/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group flex items-center gap-3 font-mono text-sm"
@@ -239,7 +233,7 @@ export default function Footer() {
                 className="font-mono text-xs tracking-widest uppercase mb-6"
                 style={{ color: '#dadada', opacity: 0.6 }}
               >
-                Availability
+                {t('footerAvailability')}
               </div>
               <div
                 className="flex items-center gap-3 font-mono text-sm"
@@ -255,7 +249,7 @@ export default function Footer() {
                     boxShadow: '0 0 8px rgba(74, 222, 128, 0.5)',
                   }}
                 />
-                Available for Hire
+                {t('footerAvailable')}
               </div>
             </div>
           </div>
@@ -273,7 +267,7 @@ export default function Footer() {
             className="font-mono text-xs"
             style={{ color: '#dadada', opacity: 0.4 }}
           >
-            {footerConfig.copyright}
+            {t('footerCopyright')}
           </div>
         </div>
       </div>

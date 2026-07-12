@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 const CODE_LINES = [
   { text: 'import React from "react";', color: '#c586c0' },
@@ -32,6 +33,7 @@ export default function CinematicVision() {
   const [currentChar, setCurrentChar] = useState(0);
   const [showCursor, setShowCursor] = useState(true);
   const [isTypingComplete, setIsTypingComplete] = useState(false);
+  const { t } = useTranslation();
 
   // Blinking cursor
   useEffect(() => {
@@ -49,7 +51,7 @@ export default function CinematicVision() {
     }
 
     const line = CODE_LINES[currentLine];
-    
+
     if (line.text === '') {
       setDisplayedLines((prev) => [...prev, '']);
       setCurrentLine((prev) => prev + 1);
@@ -130,7 +132,7 @@ export default function CinematicVision() {
               letterSpacing: '-0.02em',
             }}
           >
-            A Glimpse Into My Work
+            {t('showreelTitle')}
           </h2>
           <p
             className="font-mono text-sm"
@@ -141,7 +143,7 @@ export default function CinematicVision() {
               lineHeight: 1.6,
             }}
           >
-            A collection of my projects and learning journey using modern web technologies.
+            {t('showreelDesc')}
           </p>
         </div>
 
