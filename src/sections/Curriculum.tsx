@@ -71,8 +71,8 @@ export default function Curriculum() {
       ref={sectionRef}
       className="relative"
       style={{
-        padding: '150px 5vw',
-        minHeight: '100vh',
+        padding: '80px 5vw',
+        minHeight: 'auto',
         background: 'transparent',
       }}
     >
@@ -100,7 +100,7 @@ export default function Curriculum() {
           }}
         />
 
-        <div className="flex flex-col" style={{ gap: 100 }}>
+        <div className="flex flex-col" style={{ gap: 40 }}>
           {CAPABILITIES.map((cap, i) => (
             <div
               key={cap.slug}
@@ -178,8 +178,7 @@ export default function Curriculum() {
           ))}
         </div>
 
-        {/* Tech Stack Section */}
-        <div style={{ marginTop: 120 }}>
+        <div style={{ marginTop: 60 }}>
           <div
             style={{
               fontFamily: "'Inter', sans-serif",
@@ -210,7 +209,6 @@ export default function Curriculum() {
               gap: 16,
             }}
           >
-            {/* React */}
             <div
               className="tech-card"
               style={{
@@ -251,7 +249,6 @@ export default function Curriculum() {
               </span>
             </div>
 
-            {/* TypeScript */}
             <div
               className="tech-card"
               style={{
@@ -292,7 +289,6 @@ export default function Curriculum() {
               </span>
             </div>
 
-            {/* Java */}
             <div
               className="tech-card"
               style={{
@@ -332,7 +328,6 @@ export default function Curriculum() {
               </span>
             </div>
 
-            {/* Spring Boot */}
             <div
               className="tech-card"
               style={{
@@ -374,7 +369,6 @@ export default function Curriculum() {
               </span>
             </div>
 
-            {/* MySQL */}
             <div
               className="tech-card"
               style={{
@@ -412,7 +406,6 @@ export default function Curriculum() {
               </span>
             </div>
 
-            {/* Git */}
             <div
               className="tech-card"
               style={{
