@@ -24,21 +24,6 @@ export default function About() {
       }}
     >
       <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
-        <span
-          style={{
-            display: 'block',
-            fontFamily: "'GeistMono', monospace",
-            fontWeight: 300,
-            fontSize: '12px',
-            letterSpacing: '0.2em',
-            textTransform: 'uppercase',
-            color: '#888888',
-            marginBottom: '32px',
-          }}
-        >
-          {t('aboutLabel')}
-        </span>
-
         <h2
           style={{
             fontFamily: "'EB Garamond', serif",
@@ -233,83 +218,35 @@ export default function About() {
                 </div>
               </div>
             ))}
-
+            
+            {/* Navigation buttons and indicators remain same */}
             <button
               onClick={() => setCurrentSlide((prev) => (prev - 1 + vlogConfig.slides.length) % vlogConfig.slides.length)}
-              style={{
-                position: 'absolute',
-                top: '50%',
-                left: '20px',
-                transform: 'translateY(-50%)',
-                zIndex: 10,
-                background: 'rgba(0,0,0,0.5)',
-                border: '1px solid rgba(255,255,255,0.2)',
-                color: '#fff',
-                width: '40px',
-                height: '40px',
-                borderRadius: '50%',
-                cursor: 'pointer',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                fontSize: '18px',
-                transition: 'all 0.2s ease'
-              }}
+              style={{ position: 'absolute', top: '50%', left: '20px', transform: 'translateY(-50%)', zIndex: 10, background: 'rgba(0,0,0,0.5)', border: '1px solid rgba(255,255,255,0.2)', color: '#fff', width: '40px', height: '40px', borderRadius: '50%', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '18px', transition: 'all 0.2s ease' }}
               onMouseEnter={(e) => { e.currentTarget.style.background = '#ffffff'; e.currentTarget.style.color = '#000000'; }}
               onMouseLeave={(e) => { e.currentTarget.style.background = 'rgba(0,0,0,0.5)'; e.currentTarget.style.color = '#ffffff'; }}
             >
               &larr;
             </button>
-            
             <button
               onClick={() => setCurrentSlide((prev) => (prev + 1) % vlogConfig.slides.length)}
-              style={{
-                position: 'absolute',
-                top: '50%',
-                right: '20px',
-                transform: 'translateY(-50%)',
-                zIndex: 10,
-                background: 'rgba(0,0,0,0.5)',
-                border: '1px solid rgba(255,255,255,0.2)',
-                color: '#fff',
-                width: '40px',
-                height: '40px',
-                borderRadius: '50%',
-                cursor: 'pointer',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                fontSize: '18px',
-                transition: 'all 0.2s ease'
-              }}
+              style={{ position: 'absolute', top: '50%', right: '20px', transform: 'translateY(-50%)', zIndex: 10, background: 'rgba(0,0,0,0.5)', border: '1px solid rgba(255,255,255,0.2)', color: '#fff', width: '40px', height: '40px', borderRadius: '50%', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '18px', transition: 'all 0.2s ease' }}
               onMouseEnter={(e) => { e.currentTarget.style.background = '#ffffff'; e.currentTarget.style.color = '#000000'; }}
               onMouseLeave={(e) => { e.currentTarget.style.background = 'rgba(0,0,0,0.5)'; e.currentTarget.style.color = '#ffffff'; }}
             >
               &rarr;
             </button>
-
             <div style={{ position: 'absolute', bottom: '20px', right: '20px', zIndex: 10, display: 'flex', gap: '8px' }}>
               {vlogConfig.slides.map((_, index) => (
                 <button
                   key={index}
                   onClick={() => setCurrentSlide(index)}
-                  style={{
-                    width: '8px',
-                    height: '8px',
-                    borderRadius: '50%',
-                    border: 'none',
-                    padding: 0,
-                    cursor: 'pointer',
-                    backgroundColor: index === currentSlide ? '#ffffff' : '#555555',
-                    transform: index === currentSlide ? 'scale(1.2)' : 'scale(1)',
-                    transition: 'all 0.3s ease'
-                  }}
+                  style={{ width: '8px', height: '8px', borderRadius: '50%', border: 'none', padding: 0, cursor: 'pointer', backgroundColor: index === currentSlide ? '#ffffff' : '#555555', transform: index === currentSlide ? 'scale(1.2)' : 'scale(1)', transition: 'all 0.3s ease' }}
                 />
               ))}
             </div>
           </div>
         </div>
-
       </div>
     </section>
   );
