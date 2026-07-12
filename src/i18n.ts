@@ -49,7 +49,7 @@ const resources = {
       navContact: "お問い合わせ",
       ctaHire: "採用依頼",
       
-      heroTitle: "ラーマン",
+      heroTitle: "ナイエム・ナイムール",
       heroSub1: "日本を拠点とするジュニアソフトウェアエンジニア。",
       heroSub2: "React、TypeScript、Java、Spring Bootを使ったモダンなWebアプリを開発。",
       ctaView: "プロジェクトを見る",
