@@ -40,10 +40,10 @@ export default function About() {
         <p
           style={{
             fontFamily: "'Inter', sans-serif",
-            fontWeight: 200,
+            fontWeight: 400,
             fontSize: '18px',
             lineHeight: 1.7,
-            color: '#aaaaaa',
+            color: '#ffffff',
             maxWidth: '700px',
             marginBottom: '80px',
           }}
@@ -60,28 +60,28 @@ export default function About() {
           }}
         >
           <div>
-            <h4 style={{ fontFamily: "'GeistMono', monospace", fontWeight: 300, fontSize: '11px', letterSpacing: '0.15em', textTransform: 'uppercase', color: '#666666', marginBottom: '12px' }}>
+            <h4 style={{ fontFamily: "'GeistMono', monospace", fontWeight: 400, fontSize: '11px', letterSpacing: '0.15em', textTransform: 'uppercase', color: '#aaaaaa', marginBottom: '12px' }}>
               {t('eduLabel')}
             </h4>
-            <p style={{ fontFamily: "'Inter', sans-serif", fontWeight: 200, fontSize: '15px', lineHeight: 1.6, color: '#cccccc' }}>
+            <p style={{ fontFamily: "'Inter', sans-serif", fontWeight: 400, fontSize: '15px', lineHeight: 1.6, color: '#ffffff' }}>
               {t('eduText')}
             </p>
           </div>
 
           <div>
-            <h4 style={{ fontFamily: "'GeistMono', monospace", fontWeight: 300, fontSize: '11px', letterSpacing: '0.15em', textTransform: 'uppercase', color: '#666666', marginBottom: '12px' }}>
+            <h4 style={{ fontFamily: "'GeistMono', monospace", fontWeight: 400, fontSize: '11px', letterSpacing: '0.15em', textTransform: 'uppercase', color: '#aaaaaa', marginBottom: '12px' }}>
               {t('locLabel')}
             </h4>
-            <p style={{ fontFamily: "'Inter', sans-serif", fontWeight: 200, fontSize: '15px', lineHeight: 1.6, color: '#cccccc' }}>
+            <p style={{ fontFamily: "'Inter', sans-serif", fontWeight: 400, fontSize: '15px', lineHeight: 1.6, color: '#ffffff' }}>
               {t('locText')}
             </p>
           </div>
 
           <div>
-            <h4 style={{ fontFamily: "'GeistMono', monospace", fontWeight: 300, fontSize: '11px', letterSpacing: '0.15em', textTransform: 'uppercase', color: '#666666', marginBottom: '12px' }}>
+            <h4 style={{ fontFamily: "'GeistMono', monospace", fontWeight: 400, fontSize: '11px', letterSpacing: '0.15em', textTransform: 'uppercase', color: '#aaaaaa', marginBottom: '12px' }}>
               {t('langLabel')}
             </h4>
-            <p style={{ fontFamily: "'Inter', sans-serif", fontWeight: 200, fontSize: '15px', lineHeight: 1.6, color: '#cccccc' }}>
+            <p style={{ fontFamily: "'Inter', sans-serif", fontWeight: 400, fontSize: '15px', lineHeight: 1.6, color: '#ffffff' }}>
               {t('langText')}
             </p>
           </div>
@@ -91,11 +91,11 @@ export default function About() {
           <h4
             style={{
               fontFamily: "'GeistMono', monospace",
-              fontWeight: 300,
+              fontWeight: 400,
               fontSize: '11px',
               letterSpacing: '0.15em',
               textTransform: 'uppercase',
-              color: '#666666',
+              color: '#aaaaaa',
               marginBottom: '20px',
             }}
           >
@@ -107,12 +107,12 @@ export default function About() {
                 key={index}
                 style={{
                   fontFamily: "'GeistMono', monospace",
-                  fontWeight: 300,
+                  fontWeight: 400,
                   fontSize: '12px',
                   letterSpacing: '0.05em',
-                  color: '#888888',
+                  color: '#ffffff',
                   padding: '10px 20px',
-                  border: '1px solid rgba(255, 255, 255, 0.1)',
+                  border: '1px solid rgba(255, 255, 255, 0.2)',
                 }}
               >
                 {cert}
@@ -152,7 +152,7 @@ export default function About() {
                   inset: 0,
                   width: '100%',
                   height: '100%',
-                  transition: 'opacity 1.5s ease-in-out', 
+                  transition: 'opacity 1.5s ease-in-out',
                   opacity: index === currentSlide ? 1 : 0,
                   zIndex: index === currentSlide ? 1 : 0,
                   pointerEvents: index === currentSlide ? 'auto' : 'none',
