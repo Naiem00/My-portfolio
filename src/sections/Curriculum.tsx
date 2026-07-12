@@ -116,7 +116,7 @@ export default function Curriculum() {
                   style={{
                     fontFamily: "'EB Garamond', serif",
                     fontWeight: 400,
-                    fontSize: 'clamp(40px, 5.4vw, 86.4px)',
+                    fontSize: 'clamp(32px, 4vw, 64px)',
                     lineHeight: 1.05,
                     letterSpacing: '-1.44px',
                     color: hoveredIndex === i ? 'rgba(200, 170, 130, 1)' : '#ffffff',
