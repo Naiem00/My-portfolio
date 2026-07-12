@@ -264,7 +264,7 @@ export const researchConfig: ResearchConfig = {
   github: "https://github.com/Naiem00/mobile-app/tree/main/03_4calculator",
   live: "https://calc-pro-psi.vercel.app",
 },
-    
+
  {
   title: "Memo App",
   year: "2026",
@@ -281,7 +281,7 @@ export const researchConfig: ResearchConfig = {
   github: "https://github.com/Naiem00/mobile-app/tree/main/10c_omikuji",
   live: "https://omikuzigame.vercel.app",
 },
-    
+
  {
   title: "Time Guessing Quiz",
   year: "2026",
