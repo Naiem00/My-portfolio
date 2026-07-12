@@ -6,7 +6,6 @@ export default function About() {
   const { t } = useTranslation();
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  // Auto-play interval for the slideshow (4 seconds)
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % vlogConfig.slides.length);
@@ -25,7 +24,6 @@ export default function About() {
       }}
     >
       <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
-        {/* Section Label */}
         <span
           style={{
             display: 'block',
@@ -41,7 +39,6 @@ export default function About() {
           {t('aboutLabel')}
         </span>
 
-        {/* Name */}
         <h2
           style={{
             fontFamily: "'EB Garamond', serif",
@@ -55,7 +52,6 @@ export default function About() {
           Naiem Naimur Rahman
         </h2>
 
-        {/* Bio */}
         <p
           style={{
             fontFamily: "'Inter', sans-serif",
@@ -70,7 +66,6 @@ export default function About() {
           {t('aboutBio')}
         </p>
 
-        {/* Info Grid */}
         <div
           style={{
             display: 'grid',
@@ -107,7 +102,6 @@ export default function About() {
           </div>
         </div>
 
-        {/* Certifications */}
         <div style={{ marginBottom: '80px' }}>
           <h4
             style={{
@@ -142,27 +136,25 @@ export default function About() {
           </div>
         </div>
 
-        {/* Integrated Photography & Journey Slideshow */}
-        <div style={{ marginTop: '80px' }}>
-          <h4
+        <div style={{ marginTop: '100px' }}>
+          <h2
             style={{
-              fontFamily: "'GeistMono', monospace",
-              fontWeight: 300,
-              fontSize: '11px',
-              letterSpacing: '0.15em',
-              textTransform: 'uppercase',
-              color: '#666666',
+              fontFamily: "'EB Garamond', serif",
+              fontWeight: 400,
+              fontSize: 'clamp(28px, 4vw, 42px)',
+              lineHeight: 1.2,
               marginBottom: '32px',
+              color: '#ffffff',
             }}
           >
             {t(vlogConfig.sectionLabelKey)}
-          </h4>
+          </h2>
 
           <div 
             style={{ 
               position: 'relative', 
               width: '100%', 
-              height: 'clamp(350px, 50vh, 550px)', 
+              height: 'clamp(400px, 55vh, 600px)', 
               backgroundColor: '#121212',
               border: '1px solid rgba(255, 255, 255, 0.05)',
               overflow: 'hidden'
@@ -176,7 +168,7 @@ export default function About() {
                   inset: 0,
                   width: '100%',
                   height: '100%',
-                  transition: 'opacity 1000s ease-in-out',
+                  transition: 'opacity 1s ease-in-out',
                   opacity: index === currentSlide ? 1 : 0,
                   zIndex: index === currentSlide ? 1 : 0,
                   pointerEvents: index === currentSlide ? 'auto' : 'none',
@@ -192,16 +184,14 @@ export default function About() {
                     opacity: 0.55,
                   }}
                 />
-                {/* Overlay Gradient to blend with dark background */}
                 <div 
                   style={{
                     position: 'absolute',
                     inset: 0,
-                    background: 'linear-gradient(to top, #0a0a0a 5%, rgba(10,10,10,0.4) 60%, transparent 100%)'
+                    background: 'linear-gradient(to top, #0a0a0a 5%, rgba(10,10,10,0.3) 60%, transparent 100%)'
                   }} 
                 />
                 
-                {/* Slide Info */}
                 <div 
                   style={{
                     position: 'absolute',
@@ -215,7 +205,7 @@ export default function About() {
                   <h3 
                     style={{ 
                       fontFamily: "'EB Garamond', serif", 
-                      fontSize: 'clamp(22px, 3vw, 32px)', 
+                      fontSize: 'clamp(24px, 3vw, 36px)', 
                       fontWeight: 400, 
                       marginBottom: '12px',
                       letterSpacing: '0.02em'
@@ -239,7 +229,6 @@ export default function About() {
               </div>
             ))}
 
-            {/* Navigation Arrows */}
             <button
               onClick={() => setCurrentSlide((prev) => (prev - 1 + vlogConfig.slides.length) % vlogConfig.slides.length)}
               style={{
@@ -258,7 +247,8 @@ export default function About() {
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                fontSize: '18px'
+                fontSize: '18px',
+                transition: 'all 0.2s ease'
               }}
               onMouseEnter={(e) => { e.currentTarget.style.background = '#ffffff'; e.currentTarget.style.color = '#000000'; }}
               onMouseLeave={(e) => { e.currentTarget.style.background = 'rgba(0,0,0,0.4)'; e.currentTarget.style.color = '#ffffff'; }}
@@ -284,7 +274,8 @@ export default function About() {
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                fontSize: '18px'
+                fontSize: '18px',
+                transition: 'all 0.2s ease'
               }}
               onMouseEnter={(e) => { e.currentTarget.style.background = '#ffffff'; e.currentTarget.style.color = '#000000'; }}
               onMouseLeave={(e) => { e.currentTarget.style.background = 'rgba(0,0,0,0.4)'; e.currentTarget.style.color = '#ffffff'; }}
@@ -292,7 +283,6 @@ export default function About() {
               &rarr;
             </button>
 
-            {/* Indicator Dots */}
             <div style={{ position: 'absolute', bottom: '20px', right: '20px', zIndex: 10, display: 'flex', gap: '8px' }}>
               {vlogConfig.slides.map((_, index) => (
                 <button
