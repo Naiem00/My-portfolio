@@ -105,7 +105,7 @@ export default function CinematicVision() {
       id="cinematic"
       ref={containerRef}
       style={{
-        padding: '150px 5vw',
+        padding: '120px 24px',
         background: '#0a0a0a',
         position: 'relative',
         zIndex: 2,
@@ -118,7 +118,7 @@ export default function CinematicVision() {
             display: 'flex',
             justifyContent: 'space-between',
             alignItems: 'flex-end',
-            marginBottom: 80,
+            marginBottom: 60,
             flexWrap: 'wrap',
             gap: 24,
           }}
@@ -155,6 +155,7 @@ export default function CinematicVision() {
             border: '1px solid rgba(255, 255, 255, 0.1)',
             overflow: 'hidden',
             boxShadow: '0 20px 60px rgba(0, 0, 0, 0.5)',
+            width: '100%',
           }}
         >
           {/* Terminal Header */}
@@ -168,30 +169,9 @@ export default function CinematicVision() {
               borderBottom: '1px solid rgba(255, 255, 255, 0.05)',
             }}
           >
-            <div
-              style={{
-                width: 12,
-                height: 12,
-                borderRadius: '50%',
-                background: '#ff5f56',
-              }}
-            />
-            <div
-              style={{
-                width: 12,
-                height: 12,
-                borderRadius: '50%',
-                background: '#ffbd2e',
-              }}
-            />
-            <div
-              style={{
-                width: 12,
-                height: 12,
-                borderRadius: '50%',
-                background: '#27c93f',
-              }}
-            />
+            <div style={{ width: 12, height: 12, borderRadius: '50%', background: '#ff5f56' }} />
+            <div style={{ width: 12, height: 12, borderRadius: '50%', background: '#ffbd2e' }} />
+            <div style={{ width: 12, height: 12, borderRadius: '50%', background: '#27c93f' }} />
             <span
               className="font-mono"
               style={{
@@ -205,94 +185,100 @@ export default function CinematicVision() {
             </span>
           </div>
 
-          {/* Terminal Body */}
+          {/* Terminal Body with Mobile Scroll & Font Clamp Fix */}
           <div
             style={{
-              padding: '24px 28px',
+              padding: '24px 20px',
               fontFamily: "'Fira Code', 'Consolas', 'Monaco', monospace",
-              fontSize: 14,
+              fontSize: 'clamp(11px, 3.3vw, 14px)',
               lineHeight: 1.8,
               minHeight: 420,
+              overflowX: 'auto',
+              WebkitOverflowScrolling: 'touch',
+              width: '100%',
             }}
           >
-            {displayedLines.map((line, lineIndex) => (
-              <div
-                key={`${lineIndex}-${isTypingComplete ? 'done' : 'typing'}`}
-                style={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  minHeight: '1.8em',
+            <div style={{ minWidth: 'fit-content' }}>
+              {displayedLines.map((line, lineIndex) => (
+                <div
+                  key={`${lineIndex}-${isTypingComplete ? 'done' : 'typing'}`}
+                  style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    minHeight: '1.8em',
+                  }}
+                >
+                  <span
+                    style={{
+                      color: '#858585',
+                      marginRight: 16,
+                      minWidth: 24,
+                      textAlign: 'right',
+                      fontSize: 11,
+                      userSelect: 'none',
+                    }}
+                  >
+                    {lineIndex + 1}
+                  </span>
+                  <span
+                    style={{
+                      color: getLineColor(lineIndex),
+                      whiteSpace: 'pre',
+                    }}
+                  >
+                    {line}
+                    {lineIndex === currentLine && !isTypingComplete && (
+                      <span
+                        style={{
+                          display: 'inline-block',
+                          width: 6,
+                          height: 15,
+                          background: showCursor ? '#4ec9b0' : 'transparent',
+                          marginLeft: 2,
+                          verticalAlign: 'text-bottom',
+                          transition: 'background 0.1s',
+                        }}
+                      />
+                    )}
+                  </span>
+                </div>
+              ))}
+              
+              {/* Cursor on empty line while typing */}
+              {!isTypingComplete && currentLine < CODE_LINES.length && displayedLines.length <= currentLine && (
+                <div
+                  style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    minHeight: '1.8em',
+                  }}
+                >
+                  <span
+                    style={{
+                      color: '#858585',
+                      marginRight: 16,
+                      minWidth: 24,
+                      textAlign: 'right',
+                      fontSize: 11,
+                      userSelect: 'none',
+                    }}
+                  >
+                    {currentLine + 1}
+                  </span>
+                  <span
+                    style={{
+                      display: 'inline-block',
+                      width: 6,
+                      height: 15,
+                      background: showCursor ? '#4ec9b0' : 'transparent',
+                      marginLeft: 2,
+                      verticalAlign: 'text-bottom',
+                      transition: 'background 0.1s',
                 }}
-              >
-                <span
-                  style={{
-                    color: '#858585',
-                    marginRight: 16,
-                    minWidth: 28,
-                    textAlign: 'right',
-                    fontSize: 12,
-                    userSelect: 'none',
-                  }}
-                >
-                  {lineIndex + 1}
-                </span>
-                <span
-                  style={{
-                    color: getLineColor(lineIndex),
-                    whiteSpace: 'pre',
-                  }}
-                >
-                  {line}
-                  {lineIndex === currentLine && !isTypingComplete && (
-                    <span
-                      style={{
-                        display: 'inline-block',
-                        width: 8,
-                        height: 18,
-                        background: showCursor ? '#4ec9b0' : 'transparent',
-                        marginLeft: 2,
-                        verticalAlign: 'text-bottom',
-                        transition: 'background 0.1s',
-                      }}
-                    />
-                  )}
-                </span>
-              </div>
-            ))}
-            {/* Cursor on empty line while typing */}
-            {!isTypingComplete && currentLine < CODE_LINES.length && (
-              <div
-                style={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  minHeight: '1.8em',
-                }}
-              >
-                <span
-                  style={{
-                    color: '#858585',
-                    marginRight: 16,
-                    minWidth: 28,
-                    textAlign: 'right',
-                    fontSize: 12,
-                    userSelect: 'none',
-                  }}
-                >
-                  {currentLine + 1}
-                </span>
-                <span
-                  style={{
-                    display: 'inline-block',
-                    width: 8,
-                    height: 18,
-                    background: showCursor ? '#4ec9b0' : 'transparent',
-                    marginLeft: 2,
-                    verticalAlign: 'text-bottom',
-                    transition: 'background 0.1s',
-                  }}
-                />
-              </div>
-            )}
+              />
+            </div>
+          )}
+            </div>
           </div>
         </div>
       </div>
