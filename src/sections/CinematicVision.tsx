@@ -35,7 +35,6 @@ export default function CinematicVision() {
   const [isTypingComplete, setIsTypingComplete] = useState(false);
   const { t } = useTranslation();
 
-  // Blinking cursor
   useEffect(() => {
     const blinkInterval = setInterval(() => {
       setShowCursor((prev) => !prev);
@@ -43,7 +42,6 @@ export default function CinematicVision() {
     return () => clearInterval(blinkInterval);
   }, []);
 
-  // Typing animation
   useEffect(() => {
     if (currentLine >= CODE_LINES.length) {
       setIsTypingComplete(true);
@@ -82,7 +80,6 @@ export default function CinematicVision() {
     }
   }, [currentLine, currentChar]);
 
-  // Restart animation after completion
   useEffect(() => {
     if (isTypingComplete) {
       const timeout = setTimeout(() => {
@@ -105,14 +102,13 @@ export default function CinematicVision() {
       id="cinematic"
       ref={containerRef}
       style={{
-        padding: '120px 24px',
+        padding: '60px 24px',
         background: '#0a0a0a',
         position: 'relative',
         zIndex: 2,
       }}
     >
       <div style={{ maxWidth: 1400, margin: '0 auto' }}>
-        {/* Section Header */}
         <div
           style={{
             display: 'flex',
@@ -147,7 +143,6 @@ export default function CinematicVision() {
           </p>
         </div>
 
-        {/* Terminal Window */}
         <div
           style={{
             background: '#1e1e1e',
@@ -158,7 +153,6 @@ export default function CinematicVision() {
             width: '100%',
           }}
         >
-          {/* Terminal Header */}
           <div
             style={{
               display: 'flex',
@@ -185,14 +179,15 @@ export default function CinematicVision() {
             </span>
           </div>
 
-          {/* Terminal Body with Mobile Scroll & Font Clamp Fix */}
           <div
             style={{
               padding: '24px 20px',
               fontFamily: "'Fira Code', 'Consolas', 'Monaco', monospace",
               fontSize: 'clamp(11px, 3.3vw, 14px)',
               lineHeight: 1.8,
-              minHeight: 420,
+              minHeight: 'auto',
+              height: 'auto',
+              paddingBottom: 40,
               overflowX: 'auto',
               WebkitOverflowScrolling: 'touch',
               width: '100%',
@@ -244,7 +239,6 @@ export default function CinematicVision() {
                 </div>
               ))}
               
-              {/* Cursor on empty line while typing */}
               {!isTypingComplete && currentLine < CODE_LINES.length && displayedLines.length <= currentLine && (
                 <div
                   style={{
