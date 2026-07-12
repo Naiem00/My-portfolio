@@ -44,7 +44,7 @@ const resources = {
   },
   ja: {
     translation: {
-      brandName: "Rahman",
+      brandName: "ラーマン",
       
       navAbout: "経歴",
       navSkills: "スキル",
@@ -53,7 +53,7 @@ const resources = {
       navContact: "お問い合わせ",
       ctaHire: "採用依頼",
       
-      heroTitle: "Naiem Naimur",
+      heroTitle: "ナイエム ナイムール",
       heroSub1: "日本を拠点とするジュニアソフトウェアエンジニア。",
       heroSub2: "React、TypeScript、Java、Spring Bootを使ったモダンなWebアプリを開発。",
       ctaView: "プロジェクトを見る",
