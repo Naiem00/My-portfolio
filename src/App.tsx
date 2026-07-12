@@ -3,7 +3,6 @@ import { Routes, Route } from 'react-router-dom';
 import Navigation from './sections/Navigation';
 import Hero from './sections/Hero';
 import About from './sections/About';
-import Curriculum from './sections/Curriculum';
 import CinematicVision from './sections/CinematicVision';
 import AlumniArchives from './sections/AlumniArchives';
 import Footer from './sections/Footer';
@@ -23,7 +22,6 @@ function HomePage() {
       <main>
         <Hero />
         <About />
-        <Curriculum />
         <CinematicVision />
         <AlumniArchives />
         <Footer />
@@ -33,7 +31,6 @@ function HomePage() {
 }
 
 export default function App() {
-  
   useEffect(() => {
     if (!(window as any).$crisp) {
       (window as any).$crisp = [];
