@@ -1,8 +1,18 @@
+import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-import { aboutConfig } from '../config';
+import { aboutConfig, vlogConfig } from '../config';
 
 export default function About() {
   const { t } = useTranslation();
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  // Auto-play interval for the slideshow (4 seconds)
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % vlogConfig.slides.length);
+    }, 4000);
+    return () => clearInterval(timer);
+  }, []);
 
   return (
     <section
@@ -64,7 +74,7 @@ export default function About() {
         <div
           style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(3, 1fr)',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
             gap: '60px',
             marginBottom: '60px',
           }}
@@ -98,7 +108,7 @@ export default function About() {
         </div>
 
         {/* Certifications */}
-        <div>
+        <div style={{ marginBottom: '80px' }}>
           <h4
             style={{
               fontFamily: "'GeistMono', monospace",
@@ -131,6 +141,180 @@ export default function About() {
             ))}
           </div>
         </div>
+
+        {/* Integrated Photography & Journey Slideshow */}
+        <div style={{ marginTop: '80px' }}>
+          <h4
+            style={{
+              fontFamily: "'GeistMono', monospace",
+              fontWeight: 300,
+              fontSize: '11px',
+              letterSpacing: '0.15em',
+              textTransform: 'uppercase',
+              color: '#666666',
+              marginBottom: '32px',
+            }}
+          >
+            {t(vlogConfig.sectionLabelKey)}
+          </h4>
+
+          <div 
+            style={{ 
+              position: 'relative', 
+              width: '100%', 
+              height: 'clamp(350px, 50vh, 550px)', 
+              backgroundColor: '#121212',
+              border: '1px solid rgba(255, 255, 255, 0.05)',
+              overflow: 'hidden'
+            }}
+          >
+            {vlogConfig.slides.map((slide, index) => (
+              <div
+                key={index}
+                style={{
+                  position: 'absolute',
+                  inset: 0,
+                  width: '100%',
+                  height: '100%',
+                  transition: 'opacity 1000s ease-in-out',
+                  opacity: index === currentSlide ? 1 : 0,
+                  zIndex: index === currentSlide ? 1 : 0,
+                  pointerEvents: index === currentSlide ? 'auto' : 'none',
+                }}
+              >
+                <img
+                  src={slide.image}
+                  alt={t(slide.titleKey)}
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'cover',
+                    opacity: 0.55,
+                  }}
+                />
+                {/* Overlay Gradient to blend with dark background */}
+                <div 
+                  style={{
+                    position: 'absolute',
+                    inset: 0,
+                    background: 'linear-gradient(to top, #0a0a0a 5%, rgba(10,10,10,0.4) 60%, transparent 100%)'
+                  }} 
+                />
+                
+                {/* Slide Info */}
+                <div 
+                  style={{
+                    position: 'absolute',
+                    bottom: 0,
+                    left: 0,
+                    right: 0,
+                    padding: 'clamp(24px, 5vw, 48px)',
+                    zIndex: 2,
+                  }}
+                >
+                  <h3 
+                    style={{ 
+                      fontFamily: "'EB Garamond', serif", 
+                      fontSize: 'clamp(22px, 3vw, 32px)', 
+                      fontWeight: 400, 
+                      marginBottom: '12px',
+                      letterSpacing: '0.02em'
+                    }}
+                  >
+                    {t(slide.titleKey)}
+                  </h3>
+                  <p 
+                    style={{ 
+                      fontFamily: "'Inter', sans-serif", 
+                      fontSize: 'clamp(14px, 1.8vw, 16px)', 
+                      fontWeight: 200, 
+                      color: '#cccccc', 
+                      maxWidth: '650px',
+                      lineHeight: 1.6
+                    }}
+                  >
+                    {t(slide.descKey)}
+                  </p>
+                </div>
+              </div>
+            ))}
+
+            {/* Navigation Arrows */}
+            <button
+              onClick={() => setCurrentSlide((prev) => (prev - 1 + vlogConfig.slides.length) % vlogConfig.slides.length)}
+              style={{
+                position: 'absolute',
+                top: '50%',
+                left: '20px',
+                transform: 'translateY(-50%)',
+                zIndex: 10,
+                background: 'rgba(0,0,0,0.4)',
+                border: '1px solid rgba(255,255,255,0.1)',
+                color: '#fff',
+                width: '40px',
+                height: '40px',
+                borderRadius: '50%',
+                cursor: 'pointer',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                fontSize: '18px'
+              }}
+              onMouseEnter={(e) => { e.currentTarget.style.background = '#ffffff'; e.currentTarget.style.color = '#000000'; }}
+              onMouseLeave={(e) => { e.currentTarget.style.background = 'rgba(0,0,0,0.4)'; e.currentTarget.style.color = '#ffffff'; }}
+            >
+              &larr;
+            </button>
+            
+            <button
+              onClick={() => setCurrentSlide((prev) => (prev + 1) % vlogConfig.slides.length)}
+              style={{
+                position: 'absolute',
+                top: '50%',
+                right: '20px',
+                transform: 'translateY(-50%)',
+                zIndex: 10,
+                background: 'rgba(0,0,0,0.4)',
+                border: '1px solid rgba(255,255,255,0.1)',
+                color: '#fff',
+                width: '40px',
+                height: '40px',
+                borderRadius: '50%',
+                cursor: 'pointer',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                fontSize: '18px'
+              }}
+              onMouseEnter={(e) => { e.currentTarget.style.background = '#ffffff'; e.currentTarget.style.color = '#000000'; }}
+              onMouseLeave={(e) => { e.currentTarget.style.background = 'rgba(0,0,0,0.4)'; e.currentTarget.style.color = '#ffffff'; }}
+            >
+              &rarr;
+            </button>
+
+            {/* Indicator Dots */}
+            <div style={{ position: 'absolute', bottom: '20px', right: '20px', zIndex: 10, display: 'flex', gap: '8px' }}>
+              {vlogConfig.slides.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentSlide(index)}
+                  style={{
+                    width: '8px',
+                    height: '8px',
+                    borderRadius: '50%',
+                    border: 'none',
+                    padding: 0,
+                    cursor: 'pointer',
+                    backgroundColor: index === currentSlide ? '#ffffff' : '#555555',
+                    transform: index === currentSlide ? 'scale(1.2)' : 'scale(1)',
+                    transition: 'all 0.3s ease'
+                  }}
+                />
+              ))}
+            </div>
+          </div>
+        </div>
+
       </div>
     </section>
   );
