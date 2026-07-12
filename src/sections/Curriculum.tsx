@@ -82,11 +82,10 @@ export default function Curriculum() {
           style={{
             fontFamily: "'Inter', sans-serif",
             fontSize: 12,
-            fontWeight: 300,
+            fontWeight: 400,
             letterSpacing: '3px',
             textTransform: 'uppercase',
-            color: '#dadada',
-            opacity: 0.6,
+            color: '#aaaaaa',
           }}
         >
           {t('skillsLabel')}
@@ -142,10 +141,10 @@ export default function Curriculum() {
                 <p
                   style={{
                     fontFamily: "'Inter', sans-serif",
-                    fontWeight: 200,
+                    fontWeight: 400,
                     fontSize: 15,
                     lineHeight: 1.8,
-                    color: '#dadada',
+                    color: '#ffffff',
                     margin: 0,
                     textWrap: 'pretty',
                     opacity: hoveredIndex === i ? 0 : 1,
@@ -184,11 +183,10 @@ export default function Curriculum() {
             style={{
               fontFamily: "'Inter', sans-serif",
               fontSize: 12,
-              fontWeight: 300,
+              fontWeight: 400,
               letterSpacing: '3px',
               textTransform: 'uppercase',
-              color: '#dadada',
-              opacity: 0.6,
+              color: '#aaaaaa',
               marginBottom: 24,
             }}
           >
@@ -243,7 +241,7 @@ export default function Curriculum() {
                 style={{
                   fontFamily: "'GeistMono', monospace",
                   fontSize: 11,
-                  color: '#dadada',
+                  color: '#ffffff',
                   letterSpacing: '0.05em',
                 }}
               >
@@ -284,7 +282,7 @@ export default function Curriculum() {
                 style={{
                   fontFamily: "'GeistMono', monospace",
                   fontSize: 11,
-                  color: '#dadada',
+                  color: '#ffffff',
                   letterSpacing: '0.05em',
                 }}
               >
@@ -324,7 +322,7 @@ export default function Curriculum() {
                 style={{
                   fontFamily: "'GeistMono', monospace",
                   fontSize: 11,
-                  color: '#dadada',
+                  color: '#ffffff',
                   letterSpacing: '0.05em',
                 }}
               >
@@ -366,7 +364,7 @@ export default function Curriculum() {
                 style={{
                   fontFamily: "'GeistMono', monospace",
                   fontSize: 11,
-                  color: '#dadada',
+                  color: '#ffffff',
                   letterSpacing: '0.05em',
                 }}
               >
@@ -404,7 +402,7 @@ export default function Curriculum() {
                 style={{
                   fontFamily: "'GeistMono', monospace",
                   fontSize: 11,
-                  color: '#dadada',
+                  color: '#ffffff',
                   letterSpacing: '0.05em',
                 }}
               >
@@ -442,7 +440,7 @@ export default function Curriculum() {
                 style={{
                   fontFamily: "'GeistMono', monospace",
                   fontSize: 11,
-                  color: '#dadada',
+                  color: '#ffffff',
                   letterSpacing: '0.05em',
                 }}
               >
