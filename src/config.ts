@@ -39,9 +39,9 @@ export interface HeroConfig {
 
 export const heroConfig: HeroConfig = {
   title: "Naiem Naimur",
-  subtitleLine1: "Junior Software Developer based in Japan.",
+  subtitleLine1: "Junior IT Engineer | AWS & Cloud Infrastructure.",
   subtitleLine2:
-    "Building modern web applications with React, TypeScript, Java, and Spring Boot.",
+    "Developing practical skills in AWS, cloud infrastructure, Linux, networking, and database technologies.",
   ctaText: "View My Projects",
   resumeUrl: "/resume.pdf",
 };
@@ -57,11 +57,12 @@ export interface AboutConfig {
 
 export const aboutConfig: AboutConfig = {
   sectionLabel: "About Me",
-  bio: "I'm Naiem Naimur Rahman, a Junior Software Developer based in Toyama, Japan. I graduated from Sundai IT Business College in March 2026 with a specialization in IT. I'm passionate about building modern web applications with React, TypeScript, Java, and Spring Boot.",
+  bio: "I'm Naiem Naimur Rahman, a Junior IT Engineer with a focus on AWS and cloud infrastructure. I graduated from Sundai IT Business College in March 2026 with a specialization in IT. I'm passionate about AWS, cloud infrastructure, Linux, networking, and database technologies, and I'm interested in building reliable and scalable cloud-based solutions.",
   education: "Sundai IT Business College - IT Expert Course (2024-2026)",
   location: "Toyama-ken, Takaoka-shi, Japan",
   languages: "Japanese (JLPT N2), English, Hindi, Bengali",
   certifications: [
+    "AWS Certified Cloud Practitioner (September 2026)",
     "JLPT N2 (July 2025)",
     "TOEIC 660 (June 2025)",
     "JPET 532 (October 2024)",
