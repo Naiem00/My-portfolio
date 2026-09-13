@@ -40,8 +40,7 @@ export interface HeroConfig {
 export const heroConfig: HeroConfig = {
   title: "Naiem Naimur",
   subtitleLine1: "Junior IT Engineer | AWS & Cloud Infrastructure.",
-  subtitleLine2:
-    "Developing practical skills in AWS, cloud infrastructure, Linux, networking, and database technologies.",
+  subtitleLine2: "Developing practical skills in AWS, cloud infrastructure, Linux, networking, and database technologies.",
   ctaText: "View My Projects",
   resumeUrl: "/resume.pdf",
 };
