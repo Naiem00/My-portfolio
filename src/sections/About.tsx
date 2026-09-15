@@ -34,7 +34,7 @@ export default function About() {
             color: '#ffffff',
           }}
         >
-          {t('aboutSectionTitle', 'About Me')}
+          {aboutConfig.sectionLabel}
         </h2>
 
         <p
@@ -48,7 +48,7 @@ export default function About() {
             marginBottom: '80px',
           }}
         >
-          {t('aboutBio')}
+          {aboutConfig.bio}
         </p>
 
         <div
@@ -64,7 +64,7 @@ export default function About() {
               {t('eduLabel')}
             </h4>
             <p style={{ fontFamily: "'Inter', sans-serif", fontWeight: 400, fontSize: '15px', lineHeight: 1.6, color: '#ffffff' }}>
-              {t('eduText')}
+              {aboutConfig.education}
             </p>
           </div>
 
@@ -73,7 +73,7 @@ export default function About() {
               {t('locLabel')}
             </h4>
             <p style={{ fontFamily: "'Inter', sans-serif", fontWeight: 400, fontSize: '15px', lineHeight: 1.6, color: '#ffffff' }}>
-              {t('locText')}
+              {aboutConfig.location}
             </p>
           </div>
 
@@ -82,7 +82,7 @@ export default function About() {
               {t('langLabel')}
             </h4>
             <p style={{ fontFamily: "'Inter', sans-serif", fontWeight: 400, fontSize: '15px', lineHeight: 1.6, color: '#ffffff' }}>
-              {t('langText')}
+              {aboutConfig.languages}
             </p>
           </div>
         </div>

@@ -39,8 +39,8 @@ export interface HeroConfig {
 
 export const heroConfig: HeroConfig = {
   title: "Naiem Naimur",
-  subtitleLine1: "Junior IT Engineer | AWS & Cloud Infrastructure.",
-  subtitleLine2: "Developing practical skills in AWS, cloud infrastructure, Linux, networking, and database technologies.",
+  subtitleLine1: "Junior IT Engineer | AWS & Cloud Infrastructure",
+  subtitleLine2: "AWS, Linux, networking, databases, and cloud security.",
   ctaText: "View My Projects",
   resumeUrl: "/resume.pdf",
 };
@@ -56,7 +56,7 @@ export interface AboutConfig {
 
 export const aboutConfig: AboutConfig = {
   sectionLabel: "About Me",
-  bio: "I'm Naiem Naimur Rahman, a Junior IT Engineer with a focus on AWS and cloud infrastructure. I graduated from Sundai IT Business College in March 2026 with a specialization in IT. I'm passionate about AWS, cloud infrastructure, Linux, networking, and database technologies, and I'm interested in building reliable and scalable cloud-based solutions.",
+  bio: "I'm Naiem Naimur Rahman, a Junior IT Engineer based in Toyama, Japan, with a growing focus on AWS and cloud infrastructure. I graduated from Sundai IT Business College in March 2026 and continue building practical skills in AWS, Linux, networking, databases, and cloud security while applying my software development background to real projects.",
   education: "Sundai IT Business College - IT Expert Course (2024-2026)",
   location: "Toyama-ken, Takaoka-shi, Japan",
   languages: "Japanese (JLPT N2), English, Hindi, Bengali",
@@ -84,31 +84,31 @@ export const capabilitiesConfig: CapabilitiesConfig = {
   sectionLabel: "Core Skills",
   items: [
     {
-      title: "Frontend Development",
-      slug: "frontend-development",
+      title: "AWS & Cloud",
+      slug: "aws-cloud",
       description:
-        "Building responsive user interfaces using React, TypeScript, and modern CSS frameworks like Tailwind.",
+        "Learning and building with core AWS services such as EC2, S3, VPC, IAM, CloudWatch, and other cloud infrastructure fundamentals.",
       image: "images/capability-1.jpg",
     },
     {
-      title: "Backend Development",
-      slug: "backend-development",
+      title: "Linux & Networking",
+      slug: "linux-networking",
       description:
-        "Creating REST APIs using Node.js and Java. Working with authentication, databases, and server-side logic.",
+        "Developing practical Linux administration and networking skills including TCP/IP, DNS, routing, subnets, permissions, and command-line workflows.",
       image: "images/capability-2.jpg",
     },
     {
-      title: "Java Development",
-      slug: "java-development",
+      title: "Cloud Security",
+      slug: "cloud-security",
       description:
-        "Developing applications and APIs using Java, focusing on clean code and OOP principles.",
+        "Building a strong foundation in IAM, least-privilege access, security groups, monitoring, shared responsibility, and secure cloud design concepts.",
       image: "images/capability-3.jpg",
     },
     {
       title: "Database & Git",
       slug: "database-git",
       description:
-        "Working with MySQL and Git/GitHub for version control and data management.",
+        "Working with MySQL and Git/GitHub for structured data, version control, collaboration, and maintaining organized technical project workflows.",
       image: "images/capability-4.jpg",
     },
   ],
@@ -136,54 +136,44 @@ export const capabilityDetailConfig: CapabilityDetailConfig = {
   nextLabel: "Next",
   notFoundText: "Skill not found.",
   capabilities: {
-    "fullstack-development": {
-      title: "Full-Stack Development",
-      subtitle: "Building modern web applications.",
+    "aws-cloud": {
+      title: "AWS & Cloud",
+      subtitle: "Building practical cloud infrastructure skills.",
       paragraphs: [
-        "I build web apps using React, TypeScript, Java, and Node.js.",
-        "I focus on clean UI and responsive frontend design.",
-        "I build simple REST APIs and connect frontend with backend.",
-        "I use GitHub for version control and project management.",
+        "I am developing practical AWS skills around core services such as EC2, S3, VPC, IAM, CloudWatch, and related infrastructure concepts.",
+        "I focus on understanding how cloud resources connect, how permissions are managed, and how reliable environments are designed and monitored.",
+        "My AWS Certified Cloud Practitioner foundation supports my continued preparation for more technical cloud and infrastructure roles.",
+        "I reinforce what I learn through hands-on labs, small projects, documentation, and GitHub-based progress tracking.",
       ],
     },
-    "frontend-development": {
-      title: "Frontend Development",
-      subtitle: "UI development and responsive design.",
+    "linux-networking": {
+      title: "Linux & Networking",
+      subtitle: "Strengthening infrastructure fundamentals.",
       paragraphs: [
-        "I build responsive UI using HTML, CSS, JavaScript, and React.",
-        "I focus on layout, spacing, and usability.",
-        "I practice modern frontend development through projects.",
-        "I improve step by step through real coding experience.",
+        "I am building Linux command-line and system administration skills including files, permissions, processes, packages, users, and basic troubleshooting.",
+        "I study networking fundamentals such as TCP/IP, DNS, routing, ports, CIDR, public and private subnets, and how systems communicate across networks.",
+        "These fundamentals help me better understand cloud infrastructure, especially VPC design, server connectivity, and security configurations.",
+        "I continue improving through repeatable labs and practical exercises rather than relying only on theory.",
       ],
     },
-    "backend-development": {
-      title: "Backend Development",
-      subtitle: "API and server-side development.",
+    "cloud-security": {
+      title: "Cloud Security",
+      subtitle: "Applying secure cloud fundamentals.",
       paragraphs: [
-        "I build backend systems using Node.js and Java.",
-        "I create REST APIs and handle application logic.",
-        "I work with MySQL for database management.",
-        "I focus on understanding how server and client communicate.",
-      ],
-    },
-    "java-development": {
-      title: "Java Development",
-      subtitle: "Object-oriented programming with Java.",
-      paragraphs: [
-        "I develop applications using Java and OOP principles.",
-        "I build simple backend systems and APIs.",
-        "I focus on clean and structured code.",
-        "I continuously practice Java through projects.",
+        "I study AWS security fundamentals including IAM users and roles, policies, least-privilege access, MFA, security groups, and the shared responsibility model.",
+        "I am learning how monitoring, logging, network controls, and identity management work together to protect cloud environments.",
+        "My goal is to design infrastructure with security considered from the beginning instead of treating it as an afterthought.",
+        "I continue practicing these concepts through AWS labs and architecture-based study scenarios.",
       ],
     },
     "database-git": {
       title: "Database & Git",
-      subtitle: "Version control and database basics.",
+      subtitle: "Data management and version control fundamentals.",
       paragraphs: [
-        "I use MySQL to manage structured data and understand relational database basics.",
-        "I work with Git and GitHub for version control and collaboration.",
-        "I practice branching, merging, and commit history management.",
-        "This helps me maintain clean and organized project workflow.",
+        "I use MySQL to work with structured data and practice relational database concepts, SQL queries, joins, and basic database management.",
+        "I use Git and GitHub for version control, project history, code organization, and documenting my technical learning.",
+        "I practice branches, commits, repository management, and clear project documentation so my work remains easy to review and continue.",
+        "These tools support both my software development background and my growing cloud and infrastructure project work.",
       ],
     },
   },
@@ -201,7 +191,7 @@ export const architectureConfig: ArchitectureConfig = {
   videoPath: "/videos/showreel.mp4",
   title: "A Glimpse Into My Work",
   description:
-    "A collection of my projects and learning journey using modern web technologies.",
+    "A visual look at my technical journey across software development, AWS, cloud infrastructure, Linux, networking, and hands-on learning as I continue growing toward an IT and cloud engineering career.",
 };
 
 export interface ResearchProject {
