@@ -19,13 +19,13 @@ export interface NavigationConfig {
 }
 
 export const navigationConfig: NavigationConfig = {
- links: [
-  { label: "About", href: "#about" },
-  { label: "Skills", href: "#curriculum" },
-  { label: "Showreel", href: "#cinematic" },
-  { label: "Projects", href: "#alumni" },
-  { label: "Contact", href: "#footer" },
-],
+  links: [
+    { label: "About", href: "#about" },
+    { label: "Skills", href: "#curriculum" },
+    { label: "Showreel", href: "#cinematic" },
+    { label: "Projects", href: "#alumni" },
+    { label: "Contact", href: "#footer" },
+  ],
   ctaText: "Hire Me",
 };
 
@@ -34,13 +34,14 @@ export interface HeroConfig {
   subtitleLine1: string;
   subtitleLine2: string;
   ctaText: string;
-  resumeUrl: string;  
+  resumeUrl: string;
 }
 
 export const heroConfig: HeroConfig = {
   title: "Naiem Naimur",
-  subtitleLine1: "Junior IT Engineer | AWS & Cloud Infrastructure",
-  subtitleLine2: "AWS, Linux, networking, databases, and cloud security.",
+  subtitleLine1: "Junior IT Engineer | AWS & Cloud Infrastructure.",
+  subtitleLine2:
+    "Developing practical skills in AWS, cloud infrastructure, Linux, networking, and database technologies.",
   ctaText: "View My Projects",
   resumeUrl: "/resume.pdf",
 };
@@ -56,10 +57,12 @@ export interface AboutConfig {
 
 export const aboutConfig: AboutConfig = {
   sectionLabel: "About Me",
-  bio: "I'm Naiem Naimur Rahman, a Junior IT Engineer based in Toyama, Japan, with a growing focus on AWS and cloud infrastructure. I graduated from Sundai IT Business College in March 2026 and continue developing practical skills in AWS, cloud infrastructure, Linux, networking, and database technologies while applying my software development background to real-world projects..",
-  education: "Sundai IT Business College - IT Expert Course (2024-2026)",
+  bio: "I'm Naiem Naimur Rahman, a Junior IT Engineer based in Toyama, Japan, with a growing focus on AWS and cloud infrastructure. I graduated from Sundai IT Business College in March 2026 and continue developing practical skills in AWS, cloud infrastructure, Linux, networking, and database technologies while applying my software development background to real-world projects.",
+  education:
+    "Sundai IT Business College - IT Expert Course (2024-2026)",
   location: "Toyama-ken, Takaoka-shi, Japan",
-  languages: "Japanese (JLPT N2), English, Hindi, Bengali",
+  languages:
+    "Japanese (JLPT N2), English, Hindi, Bengali",
   certifications: [
     "AWS Certified Cloud Practitioner (September 2026)",
     "JLPT N2 (July 2025)",
@@ -85,30 +88,30 @@ export const capabilitiesConfig: CapabilitiesConfig = {
   items: [
     {
       title: "AWS & Cloud",
-      slug: "aws-cloud",
+      slug: "frontend-development",
       description:
-        "Learning and building with core AWS services such as EC2, S3, VPC, IAM, CloudWatch, and other cloud infrastructure fundamentals.",
+        "Working with AWS services including EC2, S3, VPC, IAM, RDS, and other core cloud services while building practical cloud infrastructure knowledge.",
       image: "images/capability-1.jpg",
     },
     {
       title: "Linux & Networking",
-      slug: "linux-networking",
+      slug: "backend-development",
       description:
-        "Developing practical Linux administration and networking skills including TCP/IP, DNS, routing, subnets, permissions, and command-line workflows.",
+        "Developing practical Linux administration and networking skills, including IP addressing, subnets, routing, DNS, and troubleshooting.",
       image: "images/capability-2.jpg",
     },
     {
       title: "Cloud Security",
-      slug: "cloud-security",
+      slug: "java-development",
       description:
-        "Building a strong foundation in IAM, least-privilege access, security groups, monitoring, shared responsibility, and secure cloud design concepts.",
+        "Learning cloud security fundamentals with IAM, permissions, access control, security groups, and secure infrastructure practices.",
       image: "images/capability-3.jpg",
     },
     {
       title: "Database & Git",
       slug: "database-git",
       description:
-        "Working with MySQL and Git/GitHub for structured data, version control, collaboration, and maintaining organized technical project workflows.",
+        "Working with MySQL, relational database fundamentals, Git, and GitHub for data management and version control.",
       image: "images/capability-4.jpg",
     },
   ],
@@ -135,40 +138,48 @@ export const capabilityDetailConfig: CapabilityDetailConfig = {
   prevLabel: "Previous",
   nextLabel: "Next",
   notFoundText: "Skill not found.",
+
   capabilities: {
-    "aws-cloud": {
+    "frontend-development": {
       title: "AWS & Cloud",
-      subtitle: "Building practical cloud infrastructure skills.",
+      subtitle:
+        "Building practical cloud infrastructure knowledge.",
       paragraphs: [
-        "I am developing practical AWS skills around core services such as EC2, S3, VPC, IAM, CloudWatch, and related infrastructure concepts.",
-        "I focus on understanding how cloud resources connect, how permissions are managed, and how reliable environments are designed and monitored.",
-        "My AWS Certified Cloud Practitioner foundation supports my continued preparation for more technical cloud and infrastructure roles.",
-        "I reinforce what I learn through hands-on labs, small projects, documentation, and GitHub-based progress tracking.",
+        "I am developing practical knowledge of AWS and cloud infrastructure through hands-on learning and certification study.",
+        "I work with core AWS services such as EC2, S3, VPC, IAM, and RDS to understand how cloud resources are created, connected, and managed.",
+        "I am learning how networking, permissions, storage, compute, and databases work together within AWS environments.",
+        "My goal is to continue improving my practical cloud skills through labs, projects, and AWS certification study.",
       ],
     },
-    "linux-networking": {
+
+    "backend-development": {
       title: "Linux & Networking",
-      subtitle: "Strengthening infrastructure fundamentals.",
+      subtitle:
+        "Developing Linux and networking fundamentals.",
       paragraphs: [
-        "I am building Linux command-line and system administration skills including files, permissions, processes, packages, users, and basic troubleshooting.",
-        "I study networking fundamentals such as TCP/IP, DNS, routing, ports, CIDR, public and private subnets, and how systems communicate across networks.",
-        "These fundamentals help me better understand cloud infrastructure, especially VPC design, server connectivity, and security configurations.",
-        "I continue improving through repeatable labs and practical exercises rather than relying only on theory.",
+        "I am developing practical Linux skills including command-line navigation, file and directory management, permissions, and basic system administration.",
+        "I am also studying networking fundamentals such as IP addressing, subnetting, routing, DNS, ports, and common network protocols.",
+        "I use these concepts to better understand how servers, networks, and cloud infrastructure communicate with each other.",
+        "Linux and networking are an important part of my cloud infrastructure learning and AWS study.",
       ],
     },
-    "cloud-security": {
+
+    "java-development": {
       title: "Cloud Security",
-      subtitle: "Applying secure cloud fundamentals.",
+      subtitle:
+        "Learning secure cloud infrastructure practices.",
       paragraphs: [
-        "I study AWS security fundamentals including IAM users and roles, policies, least-privilege access, MFA, security groups, and the shared responsibility model.",
-        "I am learning how monitoring, logging, network controls, and identity management work together to protect cloud environments.",
-        "My goal is to design infrastructure with security considered from the beginning instead of treating it as an afterthought.",
-        "I continue practicing these concepts through AWS labs and architecture-based study scenarios.",
+        "I am learning cloud security fundamentals with a focus on AWS identity, permissions, and access management.",
+        "I practice concepts such as IAM users, groups, roles, policies, security groups, and the principle of least privilege.",
+        "I am also learning how access control and network security help protect AWS resources and cloud environments.",
+        "I continue developing my security knowledge as part of my AWS and cloud infrastructure studies.",
       ],
     },
+
     "database-git": {
       title: "Database & Git",
-      subtitle: "Data management and version control fundamentals.",
+      subtitle:
+        "Data management and version control fundamentals.",
       paragraphs: [
         "I use MySQL to work with structured data and practice relational database concepts, SQL queries, joins, and basic database management.",
         "I use Git and GitHub for version control, project history, code organization, and documenting my technical learning.",
@@ -191,7 +202,7 @@ export const architectureConfig: ArchitectureConfig = {
   videoPath: "/videos/showreel.mp4",
   title: "A Glimpse Into My Work",
   description:
-    "A visual look at my technical journey across software development, AWS, cloud infrastructure, Linux, networking, and hands-on learning as I continue growing toward an IT and cloud engineering career.",
+    "A collection of my software projects, cloud learning, and hands-on technical practice.",
 };
 
 export interface ResearchProject {
@@ -216,7 +227,8 @@ export const researchConfig: ResearchConfig = {
       year: "2026",
       discipline: "Responsive Calculator",
       image: "images/research-1.jpg",
-      github: "https://github.com/Naiem00/mobile-app/tree/main/03_4calculator",
+      github:
+        "https://github.com/Naiem00/mobile-app/tree/main/03_4calculator",
       live: "https://calc-pro-psi.vercel.app",
     },
     {
@@ -224,7 +236,8 @@ export const researchConfig: ResearchConfig = {
       year: "2026",
       discipline: "Note Taking Application",
       image: "images/research-2.jpg",
-      github: "https://github.com/Naiem00/mobile-app/tree/main/04_7memo",
+      github:
+        "https://github.com/Naiem00/mobile-app/tree/main/04_7memo",
       live: "https://memo1-zeta.vercel.app",
     },
     {
@@ -232,7 +245,8 @@ export const researchConfig: ResearchConfig = {
       year: "2026",
       discipline: "Interactive Fortune Game",
       image: "images/research-3.jpg",
-      github: "https://github.com/Naiem00/mobile-app/tree/main/10c_omikuji",
+      github:
+        "https://github.com/Naiem00/mobile-app/tree/main/10c_omikuji",
       live: "https://omikuzigame.vercel.app",
     },
     {
@@ -240,7 +254,8 @@ export const researchConfig: ResearchConfig = {
       year: "2026",
       discipline: "Interactive Quiz",
       image: "images/research-4.jpg",
-      github: "https://github.com/Naiem00/mobile-app/tree/main/98_Time%20guessing%20quiz",
+      github:
+        "https://github.com/Naiem00/mobile-app/tree/main/98_Time%20guessing%20quiz",
       live: "https://timeguessingquiz.vercel.app",
     },
   ],
@@ -307,29 +322,53 @@ export interface FooterConfig {
 
 export const footerConfig: FooterConfig = {
   heading: "Let's Build Something Great",
+
   columns: [
     {
       title: "Contact",
       links: [
-        { label: "Email", href: "mailto:tsnayeem@gmail.com" },
-        { label: "GitHub", href: "https://github.com/Naiem00" },
+        {
+          label: "Email",
+          href: "mailto:tsnayeem@gmail.com",
+        },
+        {
+          label: "GitHub",
+          href: "https://github.com/Naiem00",
+        },
         {
           label: "LinkedIn",
-          href: "https://www.linkedin.com/in/naiem-rahman-2b96583aa/",
+          href:
+            "https://www.linkedin.com/in/naiem-rahman-2b96583aa/",
         },
       ],
     },
+
     {
       title: "Location",
       links: [
-        { label: "Japan", href: "#" },
-        { label: "Open to Opportunities", href: "#" },
+        {
+          label: "Japan",
+          href: "#",
+        },
+        {
+          label: "Open to Opportunities",
+          href: "#",
+        },
       ],
     },
   ],
-  copyright: "© 2026 Naiem Rahman. All rights reserved.",
+
+  copyright:
+    "© 2026 Naiem Rahman. All rights reserved.",
+
   bottomLinks: [
-    { label: "Privacy Policy", href: "#" },
-    { label: "Terms of Service", href: "#" },
+    {
+      label: "Privacy Policy",
+      href: "#",
+    },
+    {
+      label: "Terms of Service",
+      href: "#",
+    },
   ],
 };
