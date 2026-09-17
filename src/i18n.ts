@@ -26,7 +26,7 @@ const resources = {
         "Junior IT Engineer | AWS & Cloud Infrastructure.",
 
       heroSub2:
-        "Building practical skills in AWS, Linux, networking, databases, and cloud technologies.",
+        "Developing practical skills in AWS, cloud infrastructure, Linux, networking, and database technologies.",
 
       ctaView: "View My Projects",
       ctaDownload: "Download CV",

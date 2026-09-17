@@ -56,7 +56,7 @@ export interface AboutConfig {
 
 export const aboutConfig: AboutConfig = {
   sectionLabel: "About Me",
-  bio: "I'm Naiem Naimur Rahman, a Junior IT Engineer based in Toyama, Japan, with a growing focus on AWS and cloud infrastructure. I graduated from Sundai IT Business College in March 2026 and continue building practical skills in AWS, Linux, networking, databases, and cloud security while applying my software development background to real projects.",
+  bio: "I'm Naiem Naimur Rahman, a Junior IT Engineer based in Toyama, Japan, with a growing focus on AWS and cloud infrastructure. I graduated from Sundai IT Business College in March 2026 and continue developing practical skills in AWS, cloud infrastructure, Linux, networking, and database technologies while applying my software development background to real-world projects..",
   education: "Sundai IT Business College - IT Expert Course (2024-2026)",
   location: "Toyama-ken, Takaoka-shi, Japan",
   languages: "Japanese (JLPT N2), English, Hindi, Bengali",
