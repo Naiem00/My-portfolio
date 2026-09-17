@@ -34,7 +34,7 @@ export default function About() {
             color: '#ffffff',
           }}
         >
-          {aboutConfig.sectionLabel}
+             {t('aboutLabel')}
         </h2>
 
         <p
@@ -48,7 +48,7 @@ export default function About() {
             marginBottom: '80px',
           }}
         >
-          {aboutConfig.bio}
+          {t('aboutBio')}
         </p>
 
         <div
