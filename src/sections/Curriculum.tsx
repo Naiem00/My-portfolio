@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import gsap from 'gsap';
 
@@ -11,12 +10,9 @@ const CAPABILITIES = [
 ];
 
 export default function Curriculum() {
-  const navigate = useNavigate();
   const { t } = useTranslation();
-
   const sectionRef = useRef<HTMLDivElement>(null);
   const itemRefs = useRef<(HTMLDivElement | null)[]>([]);
-
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   useEffect(() => {
@@ -129,9 +125,7 @@ export default function Curriculum() {
               className="flex flex-col md:flex-row md:items-start"
               style={{
                 gap: '40px',
-                cursor: 'pointer',
               }}
-              onClick={() => navigate(`/capability/${cap.slug}`)}
               onMouseEnter={() => setHoveredIndex(i)}
               onMouseLeave={() => setHoveredIndex(null)}
             >
@@ -199,7 +193,9 @@ export default function Curriculum() {
                       objectFit: 'cover',
                       opacity: hoveredIndex === i ? 1 : 0,
                       transform:
-                        hoveredIndex === i ? 'scale(1)' : 'scale(1.05)',
+                        hoveredIndex === i
+                          ? 'scale(1)'
+                          : 'scale(1.05)',
                       transition:
                         'opacity 0.45s ease, transform 0.6s cubic-bezier(0.16, 1, 0.3, 1)',
                       filter: 'grayscale(30%)',
@@ -244,7 +240,8 @@ export default function Curriculum() {
           <div
             style={{
               display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(120px, 1fr))',
+              gridTemplateColumns:
+                'repeat(auto-fit, minmax(120px, 1fr))',
               gap: 16,
             }}
           >
@@ -256,10 +253,10 @@ export default function Curriculum() {
                 alignItems: 'center',
                 gap: 12,
                 padding: '24px 16px',
-                border: '1px solid rgba(255, 255, 255, 0.08)',
+                border:
+                  '1px solid rgba(255, 255, 255, 0.08)',
                 borderRadius: 12,
                 transition: 'all 0.3s ease',
-                cursor: 'pointer',
               }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.borderColor =
@@ -270,7 +267,8 @@ export default function Curriculum() {
               onMouseLeave={(e) => {
                 e.currentTarget.style.borderColor =
                   'rgba(255, 255, 255, 0.08)';
-                e.currentTarget.style.background = 'transparent';
+                e.currentTarget.style.background =
+                  'transparent';
               }}
             >
               <svg
@@ -322,10 +320,10 @@ export default function Curriculum() {
                 alignItems: 'center',
                 gap: 12,
                 padding: '24px 16px',
-                border: '1px solid rgba(255, 255, 255, 0.08)',
+                border:
+                  '1px solid rgba(255, 255, 255, 0.08)',
                 borderRadius: 12,
                 transition: 'all 0.3s ease',
-                cursor: 'pointer',
               }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.borderColor =
@@ -336,7 +334,8 @@ export default function Curriculum() {
               onMouseLeave={(e) => {
                 e.currentTarget.style.borderColor =
                   'rgba(255, 255, 255, 0.08)';
-                e.currentTarget.style.background = 'transparent';
+                e.currentTarget.style.background =
+                  'transparent';
               }}
             >
               <svg
@@ -391,10 +390,10 @@ export default function Curriculum() {
                 alignItems: 'center',
                 gap: 12,
                 padding: '24px 16px',
-                border: '1px solid rgba(255, 255, 255, 0.08)',
+                border:
+                  '1px solid rgba(255, 255, 255, 0.08)',
                 borderRadius: 12,
                 transition: 'all 0.3s ease',
-                cursor: 'pointer',
               }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.borderColor =
@@ -405,7 +404,8 @@ export default function Curriculum() {
               onMouseLeave={(e) => {
                 e.currentTarget.style.borderColor =
                   'rgba(255, 255, 255, 0.08)';
-                e.currentTarget.style.background = 'transparent';
+                e.currentTarget.style.background =
+                  'transparent';
               }}
             >
               <svg
@@ -477,10 +477,10 @@ export default function Curriculum() {
                 alignItems: 'center',
                 gap: 12,
                 padding: '24px 16px',
-                border: '1px solid rgba(255, 255, 255, 0.08)',
+                border:
+                  '1px solid rgba(255, 255, 255, 0.08)',
                 borderRadius: 12,
                 transition: 'all 0.3s ease',
-                cursor: 'pointer',
               }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.borderColor =
@@ -491,7 +491,8 @@ export default function Curriculum() {
               onMouseLeave={(e) => {
                 e.currentTarget.style.borderColor =
                   'rgba(255, 255, 255, 0.08)';
-                e.currentTarget.style.background = 'transparent';
+                e.currentTarget.style.background =
+                  'transparent';
               }}
             >
               <svg
@@ -542,10 +543,10 @@ export default function Curriculum() {
                 alignItems: 'center',
                 gap: 12,
                 padding: '24px 16px',
-                border: '1px solid rgba(255, 255, 255, 0.08)',
+                border:
+                  '1px solid rgba(255, 255, 255, 0.08)',
                 borderRadius: 12,
                 transition: 'all 0.3s ease',
-                cursor: 'pointer',
               }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.borderColor =
@@ -556,7 +557,8 @@ export default function Curriculum() {
               onMouseLeave={(e) => {
                 e.currentTarget.style.borderColor =
                   'rgba(255, 255, 255, 0.08)';
-                e.currentTarget.style.background = 'transparent';
+                e.currentTarget.style.background =
+                  'transparent';
               }}
             >
               <svg
@@ -590,10 +592,10 @@ export default function Curriculum() {
                 alignItems: 'center',
                 gap: 12,
                 padding: '24px 16px',
-                border: '1px solid rgba(255, 255, 255, 0.08)',
+                border:
+                  '1px solid rgba(255, 255, 255, 0.08)',
                 borderRadius: 12,
                 transition: 'all 0.3s ease',
-                cursor: 'pointer',
               }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.borderColor =
@@ -604,7 +606,8 @@ export default function Curriculum() {
               onMouseLeave={(e) => {
                 e.currentTarget.style.borderColor =
                   'rgba(255, 255, 255, 0.08)';
-                e.currentTarget.style.background = 'transparent';
+                e.currentTarget.style.background =
+                  'transparent';
               }}
             >
               <svg
