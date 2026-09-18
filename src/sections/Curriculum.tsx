@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import gsap from 'gsap';
 
@@ -10,6 +11,7 @@ const CAPABILITIES = [
 ];
 
 export default function Curriculum() {
+  const navigate = useNavigate();
   const { t } = useTranslation();
   const sectionRef = useRef<HTMLDivElement>(null);
   const itemRefs = useRef<(HTMLDivElement | null)[]>([]);
@@ -125,7 +127,9 @@ export default function Curriculum() {
               className="flex flex-col md:flex-row md:items-start"
               style={{
                 gap: '40px',
+                cursor: 'pointer',
               }}
+              onClick={() => navigate(`/capability/${cap.slug}`)}
               onMouseEnter={() => setHoveredIndex(i)}
               onMouseLeave={() => setHoveredIndex(null)}
             >
