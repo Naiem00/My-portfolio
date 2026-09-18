@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
+
 import Navigation from './sections/Navigation';
 import Hero from './sections/Hero';
 import About from './sections/About';
@@ -36,20 +37,29 @@ export default function App() {
   useEffect(() => {
     if (!(window as any).$crisp) {
       (window as any).$crisp = [];
-      (window as any).CRISP_WEBSITE_ID = "534af1e4-536b-4367-8b26-d852e4a0dda8";
+      (window as any).CRISP_WEBSITE_ID =
+        '534af1e4-536b-4367-8b26-d852e4a0dda8';
 
       const d = document;
-      const s = d.createElement("script");
-      s.src = "https://client.crisp.chat/l.js";
+      const s = d.createElement('script');
+
+      s.src = 'https://client.crisp.chat/l.js';
       s.async = true;
-      d.getElementsByTagName("head")[0]?.appendChild(s);
+
+      d.getElementsByTagName('head')[0]?.appendChild(s);
     }
   }, []);
 
   return (
     <Routes>
       <Route path="/" element={<HomePage />} />
-      <Route path="/capability/:slug" element={<CapabilityDetail />} />
+
+      <Route
+        path="/capability/:slug"
+        element={<CapabilityDetail />}
+      />
+
+      <Route path="*" element={<HomePage />} />
     </Routes>
   );
 }
